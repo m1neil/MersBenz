@@ -2,12 +2,16 @@ package com.example.mersbens;
 
 import androidx.appcompat.app.AppCompatActivity;
 
-import android.app.StatusBarManager;
 import android.content.Intent;
 import android.os.Bundle;
 import android.os.CountDownTimer;
 import android.widget.ImageView;
 import android.widget.TextView;
+
+import java.util.ArrayList;
+
+import database.Car;
+import database.DatabaseHelper;
 
 public class MainActivity extends AppCompatActivity {
 	TextView textViewLogoTitle;
@@ -22,7 +26,7 @@ public class MainActivity extends AppCompatActivity {
 		textViewLogoTitle.animate().scaleX(1).scaleY(1).setDuration(900);
 		imageViewLogo.animate().scaleX(1).scaleY(1).setDuration(900);
 
-		new CountDownTimer(0, 0) {
+		new CountDownTimer(1000, 1000) {
 
 			@Override
 			public void onTick(long millisUntilFinished) {
@@ -36,4 +40,5 @@ public class MainActivity extends AppCompatActivity {
 			}
 		}.start();
 	}
+
 }

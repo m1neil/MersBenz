@@ -1,0 +1,160 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+	android:layout_width="match_parent"
+	xmlns:app="http://schemas.android.com/apk/res-auto"
+	android:layout_marginBottom="20dp"
+	app:cardCornerRadius="25dp"
+	android:layout_height="wrap_content">
+
+	<RelativeLayout
+		android:id="@+id/relativeLayoutSportCar"
+		android:layout_width="match_parent"
+		android:layout_height="wrap_content"
+		android:background="@drawable/background_card_white"
+		android:paddingStart="15dp"
+		android:paddingTop="10dp"
+		android:paddingEnd="15dp"
+		android:paddingBottom="10dp">
+
+		<TextView
+			android:id="@+id/textViewItemSportCar"
+			android:layout_width="wrap_content"
+			android:layout_height="wrap_content"
+			android:layout_alignParentStart="true"
+			android:layout_alignParentTop="true"
+			android:layout_marginBottom="7dp"
+			android:text="Sports Cars"
+			android:textColor="@color/black"
+			android:textSize="22sp"
+			android:textStyle="bold" />
+
+		<ImageView
+			android:id="@+id/imageViewCar"
+			android:layout_width="150dp"
+			android:layout_height="80dp"
+			android:layout_below="@id/textViewItemSportCar"
+			android:layout_marginEnd="60dp"
+			android:rotationY="180"
+			android:scaleType="centerCrop"
+			android:src="@drawable/electric_car" />
+
+		<RelativeLayout
+			android:id="@+id/relativeLayoutAutomatic"
+			android:layout_width="wrap_content"
+			android:layout_height="wrap_content"
+			android:layout_alignParentTop="true"
+			android:layout_marginTop="20dp"
+			android:layout_marginBottom="7dp"
+			android:layout_toEndOf="@+id/imageViewCar">
+
+			<ImageView
+				android:id="@+id/imageViewTransmission"
+				android:layout_width="16dp"
+				android:layout_height="16dp"
+				android:layout_alignParentStart="true"
+				android:layout_alignParentTop="true"
+				android:layout_marginTop="2dp"
+				android:layout_marginEnd="5dp"
+				android:src="@drawable/icon_transmission" />
+
+			<TextView
+				android:id="@+id/textViewTransmission"
+				android:layout_width="wrap_content"
+				android:layout_height="wrap_content"
+				android:layout_alignParentTop="true"
+				android:layout_toEndOf="@+id/imageViewTransmission"
+				android:text="Automatic"
+				android:textColor="#001D42"
+				android:textStyle="bold" />
+		</RelativeLayout>
+
+		<RelativeLayout
+			android:id="@+id/relativeLayoutDoor"
+			android:layout_width="wrap_content"
+			android:layout_height="wrap_content"
+			android:layout_below="@+id/relativeLayoutAutomatic"
+			android:layout_marginBottom="7dp"
+			android:layout_toEndOf="@+id/imageViewCar">
+
+			<ImageView
+				android:id="@+id/imageViewDoor"
+				android:layout_width="16dp"
+				android:layout_height="16dp"
+				android:layout_alignParentStart="true"
+				android:layout_alignParentTop="true"
+				android:layout_marginTop="2dp"
+				android:layout_marginEnd="5dp"
+				android:src="@drawable/icon_door" />
+
+			<TextView
+				android:id="@+id/textViewDoor"
+				android:layout_width="wrap_content"
+				android:layout_height="wrap_content"
+				android:layout_alignParentTop="true"
+				android:layout_toEndOf="@+id/imageViewDoor"
+				android:text="5 Doors"
+				android:textColor="#001D42"
+				android:textStyle="bold" />
+		</RelativeLayout>
+
+		<RelativeLayout
+			android:id="@+id/relativeLayoutSpeed"
+			android:layout_width="wrap_content"
+			android:layout_height="wrap_content"
+			android:layout_below="@+id/relativeLayoutDoor"
+			android:layout_marginBottom="7dp"
+			android:layout_toEndOf="@+id/imageViewCar">
+
+			<ImageView
+				android:id="@+id/imageViewSpeed"
+				android:layout_width="16dp"
+				android:layout_height="16dp"
+				android:layout_alignParentStart="true"
+				android:layout_alignParentTop="true"
+				android:layout_marginTop="2dp"
+				android:layout_marginEnd="5dp"
+				android:src="@drawable/icon_speed" />
+
+			<TextView
+				android:id="@+id/textViewSpeed"
+				android:layout_width="wrap_content"
+				android:layout_height="wrap_content"
+				android:layout_alignParentTop="true"
+				android:layout_toEndOf="@+id/imageViewSpeed"
+				android:text="280 km"
+				android:textColor="#001D42"
+				android:textStyle="bold" />
+		</RelativeLayout>
+
+		<RelativeLayout
+			android:id="@+id/relativeLayoutTank"
+			android:layout_width="wrap_content"
+			android:layout_height="wrap_content"
+			android:layout_below="@+id/relativeLayoutSpeed"
+			android:layout_toEndOf="@+id/imageViewCar">
+
+			<ImageView
+				android:id="@+id/imageViewTank"
+				android:layout_width="16dp"
+				android:layout_height="16dp"
+				android:layout_alignParentStart="true"
+				android:layout_alignParentTop="true"
+				android:layout_marginTop="2dp"
+				android:layout_marginEnd="5dp"
+				android:src="@drawable/icon_tank" />
+
+			<TextView
+				android:id="@+id/textViewTank"
+				android:layout_width="wrap_content"
+				android:layout_height="wrap_content"
+				android:layout_alignParentTop="true"
+				android:layout_toEndOf="@+id/imageViewTank"
+				android:text="70 L"
+				android:textColor="#001D42"
+				android:textStyle="bold" />
+		</RelativeLayout>
+
+
+	</RelativeLayout>
+
+</androidx.cardview.widget.CardView>
