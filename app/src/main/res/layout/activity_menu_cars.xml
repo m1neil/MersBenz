@@ -1,0 +1,127 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+	xmlns:app="http://schemas.android.com/apk/res-auto"
+	xmlns:tools="http://schemas.android.com/tools"
+	android:layout_width="match_parent"
+	android:layout_height="match_parent"
+	tools:context=".MenuCarsActivity">
+
+	<include
+		android:id="@+id/toolBar"
+		layout="@layout/toolbar"
+		app:layout_constraintEnd_toEndOf="parent"
+		app:layout_constraintHorizontal_bias="1.0"
+		app:layout_constraintStart_toStartOf="parent"
+		app:layout_constraintTop_toTopOf="parent" />
+
+	<androidx.constraintlayout.widget.ConstraintLayout
+		android:layout_width="match_parent"
+		android:layout_height="match_parent"
+		android:paddingStart="15dp"
+		android:paddingTop="120dp"
+		android:paddingEnd="15dp"
+		android:paddingBottom="25dp"
+		app:layout_constraintStart_toStartOf="parent"
+		app:layout_constraintTop_toBottomOf="@+id/toolBar">
+
+		<RelativeLayout
+			android:id="@+id/relativeLayoutSportCar"
+			android:layout_width="match_parent"
+			android:layout_height="wrap_content"
+			android:background="@drawable/background_for_card_yellow"
+			android:elevation="5dp"
+			android:paddingStart="15dp"
+			android:paddingTop="10dp"
+			android:paddingEnd="15dp"
+			android:paddingBottom="10dp"
+			app:layout_constraintStart_toStartOf="parent"
+			app:layout_constraintTop_toTopOf="parent">
+
+			<TextView
+				android:id="@+id/textViewSportCar"
+				android:layout_width="wrap_content"
+				android:layout_height="wrap_content"
+				android:layout_alignParentStart="true"
+				android:layout_alignParentTop="true"
+				android:layout_marginBottom="7dp"
+				android:text="Sports Cars"
+				android:textColor="@color/white"
+				android:textSize="30sp"
+				android:textStyle="bold" />
+
+			<ImageView
+				android:id="@+id/imageViewSportCar"
+				android:layout_width="150dp"
+				android:layout_height="80dp"
+				android:layout_below="@id/textViewSportCar"
+				android:rotationY="180"
+				android:scaleType="centerCrop"
+				android:src="@drawable/sport_car" />
+
+			<TextView
+				android:id="@+id/textViewTitleSportCar"
+				android:layout_width="160dp"
+				android:layout_height="wrap_content"
+				android:layout_alignParentTop="true"
+				android:layout_alignParentEnd="true"
+				android:layout_marginTop="35dp"
+				android:text="Start Your Week In Style"
+				android:textColor="@color/white"
+				android:textSize="18dp"
+				android:textStyle="bold" />
+
+		</RelativeLayout>
+
+		<RelativeLayout
+			android:id="@+id/relativeLayoutSuvsCars"
+			android:layout_width="match_parent"
+			android:layout_height="wrap_content"
+			android:layout_marginTop="20dp"
+			android:background="@drawable/background_for_card_blue"
+			android:elevation="5dp"
+			android:paddingStart="15dp"
+			android:paddingTop="10dp"
+			android:paddingEnd="15dp"
+			android:paddingBottom="10dp"
+			app:layout_constraintStart_toStartOf="parent"
+			app:layout_constraintTop_toBottomOf="@+id/relativeLayoutSportCar">
+
+			<TextView
+				android:id="@+id/textViewSuvsCars"
+				android:layout_width="wrap_content"
+				android:layout_height="wrap_content"
+				android:layout_alignParentStart="true"
+				android:layout_alignParentTop="true"
+				android:layout_marginBottom="7dp"
+				android:text="SUVs Cars"
+				android:textColor="@color/white"
+				android:textSize="30sp"
+				android:textStyle="bold" />
+
+			<ImageView
+				android:id="@+id/imageViewSuvsCars"
+				android:layout_width="150dp"
+				android:layout_height="80dp"
+				android:layout_below="@id/textViewSuvsCars"
+				android:scaleType="centerCrop"
+				android:src="@drawable/suvs_car" />
+
+			<TextView
+				android:id="@+id/textViewTitleSuvsCar"
+				android:layout_width="160dp"
+				android:layout_height="wrap_content"
+				android:layout_alignParentTop="true"
+				android:layout_alignParentEnd="true"
+				android:layout_marginTop="35dp"
+				android:text="Start Your Natural In Style"
+				android:textColor="@color/white"
+				android:textSize="18dp"
+				android:textStyle="bold" />
+
+		</RelativeLayout>
+
+
+	</androidx.constraintlayout.widget.ConstraintLayout>
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
