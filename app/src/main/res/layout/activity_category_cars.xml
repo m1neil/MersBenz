@@ -6,8 +6,20 @@
 	android:layout_height="match_parent"
 	tools:context=".CategoryCarsActivity">
 
+	<include
+		android:id="@+id/toolBar"
+		layout="@layout/toolbar"
+		app:layout_constraintEnd_toEndOf="parent"
+		app:layout_constraintHorizontal_bias="1.0"
+		app:layout_constraintStart_toStartOf="parent"
+		app:layout_constraintTop_toTopOf="parent" />
+
 	<androidx.recyclerview.widget.RecyclerView
+		android:paddingTop="100dp"
 		android:id="@+id/recyclerViewCars"
+		android:layout_marginStart="15dp"
+		android:layout_marginEnd="15dp"
+		android:paddingBottom="25dp"
 		android:scrollbars="vertical"
 		android:layout_width="match_parent"
 		android:layout_height="match_parent"

@@ -1,6 +1,7 @@
 package com.example.mersbens;
 
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.appcompat.widget.Toolbar;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
@@ -24,8 +25,11 @@ public class CategoryCarsActivity extends AppCompatActivity {
 	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
 		setContentView(R.layout.activity_category_cars);
-
 		Intent intent = getIntent();
+		Toolbar toolbar = findViewById(R.id.toolBar);
+		toolbar.setTitle(intent.getStringExtra("title"));
+		setSupportActionBar(toolbar);
+
 		DatabaseHelper db = new DatabaseHelper(getApplicationContext());
 		List<Car> list = db.getCarByCategory(intent.getStringExtra("category"));
 		Log.d("size", "size" + list.size());
