@@ -1,6 +1,7 @@
 package com.example.mersbens;
 
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.appcompat.widget.Toolbar;
 
 import android.content.Intent;
 import android.os.Bundle;
@@ -20,18 +21,15 @@ public class AboutCarActivity extends AppCompatActivity {
 	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
 		setContentView(R.layout.activity_about_car);
-
-		imageView = findViewById(R.id.imageViewCar);
-		textView = findViewById(R.id.textViewTitle);
+		Toolbar toolbar = findViewById(R.id.toolBar);
+		toolbar.setTitle("About car");
+		setSupportActionBar(toolbar);
 
 		Intent intent = getIntent();
 		int id = intent.getIntExtra("idCar", 1);
 
 		DatabaseHelper db = new DatabaseHelper(getApplicationContext());
 		Car car = db.getCarById(id);
-		Log.i("idCar", "Model : " + car.getImagePath());
-		imageView.setImageResource((int) car.getImagePath());
-		textView.setText(car.getModel());
 
 	}
 }
