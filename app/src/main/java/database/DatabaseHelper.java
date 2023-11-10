@@ -108,6 +108,57 @@ public class DatabaseHelper extends SQLiteOpenHelper {
 		return cars;
 	}
 
+	public Car getCarById(int id) {
+		SQLiteDatabase db = this.getReadableDatabase();
+
+		Cursor cursor = db.query(Utils.TABLE_NAME_CARS, new String[]{Utils.KEY_ID, Utils.KEY_MODEL,
+				Utils.KEY_IMAGE_PATH, Utils.KEY_VIDEO_PATH, Utils.KEY_DESCRIPTION, Utils.KEY_YEAR_PRODUCED,
+				Utils.KEY_COUNTRY_PRODUCED, Utils.KEY_DOORS_AND_PLACES, Utils.KEY_MAX_SPEED, Utils.KEY_TYPE_TRANSMISSION,
+				Utils.KEY_DRIVE_UNIT, Utils.KEY_FUEL_TYPE, Utils.KEY_FUEL_TANK_CAPACITY, Utils.KEY_MIDDLE_PRICE,
+			}, Utils.KEY_ID + "=?", new String[]{String.valueOf(id)},
+			null, null,
+			null, null);
+		Car car = new Car();
+		if (cursor != null) {
+			try {
+				cursor.moveToFirst();
+				int idCar = cursor.getColumnIndex(Utils.KEY_ID);
+				int idModel = cursor.getColumnIndex(Utils.KEY_MODEL);
+				int idImagePath = cursor.getColumnIndex(Utils.KEY_IMAGE_PATH);
+				int idVideoPath = cursor.getColumnIndex(Utils.KEY_VIDEO_PATH);
+				int idDescription = cursor.getColumnIndex(Utils.KEY_DESCRIPTION);
+				int idYear = cursor.getColumnIndex(Utils.KEY_YEAR_PRODUCED);
+				int idCountry = cursor.getColumnIndex(Utils.KEY_COUNTRY_PRODUCED);
+				int idDoorAndPlaces = cursor.getColumnIndex(Utils.KEY_DOORS_AND_PLACES);
+				int idMaxSpeed = cursor.getColumnIndex(Utils.KEY_MAX_SPEED);
+				int idTransmission = cursor.getColumnIndex(Utils.KEY_TYPE_TRANSMISSION);
+				int idDriveUnit = cursor.getColumnIndex(Utils.KEY_DRIVE_UNIT);
+				int idFuelType = cursor.getColumnIndex(Utils.KEY_FUEL_TYPE);
+				int idFuelTankCapacity = cursor.getColumnIndex(Utils.KEY_FUEL_TANK_CAPACITY);
+				int idMiddlePrice = cursor.getColumnIndex(Utils.KEY_MIDDLE_PRICE);
+
+				car.setId(cursor.getInt(idCar));
+				car.setModel(cursor.getString(idModel));
+				car.setImagePath(cursor.getInt(idImagePath));
+				car.setVideoPath(cursor.getInt(idVideoPath));
+				car.setDescription(cursor.getString(idDescription));
+				car.setYearProduced(cursor.getString(idYear));
+				car.setCountryProduced(cursor.getString(idCountry));
+				car.setCountDoorsAndPlaces(cursor.getString(idDoorAndPlaces));
+				car.setMaxSpeed(cursor.getString(idMaxSpeed));
+				car.setTypeTransmission(cursor.getString(idTransmission));
+				car.setDriveUnit(cursor.getString(idDriveUnit));
+				car.setFuelType(cursor.getString(idFuelType));
+				car.setFuelTankCapacity(cursor.getString(idFuelTankCapacity));
+				car.setMiddlePrice(cursor.getString(idMiddlePrice));
+
+			} finally {
+				cursor.close();
+			}
+		}
+		return car;
+	}
+
 	public int getCountCars() {
 		SQLiteDatabase db = this.getReadableDatabase();
 		String query = "SELECT * FROM " + Utils.TABLE_NAME_CARS;

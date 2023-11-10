@@ -34,7 +34,6 @@
 			android:layout_height="80dp"
 			android:layout_below="@id/textViewItemSportCar"
 			android:layout_marginEnd="60dp"
-			android:rotationY="180"
 			android:scaleType="centerCrop"
 			android:src="@drawable/electric_car" />
 

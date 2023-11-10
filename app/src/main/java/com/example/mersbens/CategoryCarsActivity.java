@@ -36,7 +36,7 @@ public class CategoryCarsActivity extends AppCompatActivity {
 
 		recyclerView = findViewById(R.id.recyclerViewCars);
 		recyclerView.setHasFixedSize(true);
-		adapter = new CarCardAdapter(list);
+		adapter = new CarCardAdapter(list, getApplicationContext());
 		layoutManager = new LinearLayoutManager(this);
 		recyclerView.setAdapter(adapter);
 		recyclerView.setLayoutManager(layoutManager);
