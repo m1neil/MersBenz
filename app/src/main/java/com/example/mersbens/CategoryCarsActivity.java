@@ -30,14 +30,13 @@ public class CategoryCarsActivity extends AppCompatActivity {
 		toolbar.setTitle(intent.getStringExtra("title"));
 		setSupportActionBar(toolbar);
 
-		DatabaseHelper db = new DatabaseHelper(getApplicationContext());
+		DatabaseHelper db = new DatabaseHelper(CategoryCarsActivity.this);
 		List<Car> list = db.getCarByCategory(intent.getStringExtra("category"));
-		Log.d("size", "size" + list.size());
 
 		recyclerView = findViewById(R.id.recyclerViewCars);
 		recyclerView.setHasFixedSize(true);
-		adapter = new CarCardAdapter(list, getApplicationContext());
-		layoutManager = new LinearLayoutManager(this);
+		adapter = new CarCardAdapter(list, CategoryCarsActivity.this);
+		layoutManager = new LinearLayoutManager(CategoryCarsActivity.this);
 		recyclerView.setAdapter(adapter);
 		recyclerView.setLayoutManager(layoutManager);
 	}

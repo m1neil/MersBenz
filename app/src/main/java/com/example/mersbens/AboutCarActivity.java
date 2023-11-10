@@ -28,7 +28,7 @@ public class AboutCarActivity extends AppCompatActivity {
 		Intent intent = getIntent();
 		int id = intent.getIntExtra("idCar", 1);
 
-		DatabaseHelper db = new DatabaseHelper(getApplicationContext());
+		DatabaseHelper db = new DatabaseHelper(AboutCarActivity.this);
 		Car car = db.getCarById(id);
 
 	}
