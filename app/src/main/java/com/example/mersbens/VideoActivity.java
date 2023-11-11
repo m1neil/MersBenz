@@ -29,6 +29,7 @@ public class VideoActivity extends AppCompatActivity {
 
 		VideoView videoView = findViewById(R.id.videoView);
 		videoView.setVideoPath("android.resource://" + getPackageName() + "/" + pathVideo);
+		videoView.seekTo(4);
 
 		MediaController mediaController = new MediaController(this);
 		mediaController.setAnchorView(videoView);
