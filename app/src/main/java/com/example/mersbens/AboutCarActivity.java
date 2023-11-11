@@ -6,6 +6,8 @@ import androidx.appcompat.widget.Toolbar;
 import android.content.Intent;
 import android.os.Bundle;
 import android.util.Log;
+import android.view.View;
+import android.widget.ImageButton;
 import android.widget.ImageView;
 import android.widget.TextView;
 
@@ -63,5 +65,15 @@ public class AboutCarActivity extends AppCompatActivity {
 		textViewDoorAndPlaces.setText(car.getCountDoorsAndPlaces());
 		textViewDriveUnit.setText(car.getDriveUnit());
 
+		imageViewCar.setOnClickListener(new View.OnClickListener() {
+			@Override
+			public void onClick(View v) {
+				Intent intentVideo = new Intent(AboutCarActivity.this, VideoActivity.class);
+				intentVideo.putExtra("video", car.getVideoPath());
+				intentVideo.putExtra("model", car.getModel());
+				startActivity(intentVideo);
+				Log.d("click", "we clicked");
+			}
+		});
 	}
 }
