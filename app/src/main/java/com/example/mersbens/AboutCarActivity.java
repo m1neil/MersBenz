@@ -53,7 +53,7 @@ public class AboutCarActivity extends AppCompatActivity {
 		Car car = db.getCarById(id);
 		imageViewCar.setImageResource(car.getImagePathSecond());
 		textViewModelCar.setText(car.getModel());
-		textViewPrice.setText(car.getMiddlePrice());
+		textViewPrice.append(car.getMiddlePrice());
 		textViewDescription.append(car.getDescription());
 		textViewYear.setText(car.getYearProduced());
 		textViewCountry.setText(car.getCountryProduced());
