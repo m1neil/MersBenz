@@ -56,6 +56,7 @@
 						android:layout_height="100dp"
 						android:layout_centerHorizontal="true"
 						android:layout_centerVertical="true"
+						android:contentDescription="play video"
 						android:background="@drawable/baseline_play_circle" />
 
 				</RelativeLayout>
