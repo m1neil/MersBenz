@@ -7,9 +7,20 @@
 	android:background="@color/white"
 	tools:context=".VideoActivity">
 
+	<include
+		android:id="@+id/toolBar"
+		layout="@layout/toolbar"
+		app:layout_constraintEnd_toEndOf="parent"
+		app:layout_constraintHorizontal_bias="1.0"
+		app:layout_constraintStart_toStartOf="parent"
+		app:layout_constraintTop_toTopOf="parent" />
+
 	<ScrollView
 		android:layout_width="match_parent"
-		android:layout_height="wrap_content">
+		android:layout_height="wrap_content"
+		app:layout_constraintEnd_toEndOf="parent"
+		app:layout_constraintStart_toStartOf="parent"
+		app:layout_constraintTop_toTopOf="parent">
 
 		<androidx.constraintlayout.widget.ConstraintLayout
 			android:layout_width="match_parent"
@@ -20,6 +31,7 @@
 			android:paddingBottom="30dp">
 
 			<androidx.cardview.widget.CardView
+				android:id="@+id/cardViewVideo"
 				android:layout_width="match_parent"
 				android:layout_height="wrap_content"
 				app:cardCornerRadius="25dp"
@@ -28,15 +40,14 @@
 
 				<RelativeLayout
 					android:layout_width="match_parent"
-					android:layout_height="wrap_content">
+					android:layout_height="450dp">
 
 					<VideoView
 						android:id="@+id/videoView"
 						android:layout_width="match_parent"
-						android:layout_height="400dp"
+						android:layout_height="match_parent"
 						android:layout_alignParentStart="true"
-						android:layout_alignParentTop="true"
-						android:minHeight="400dp" />
+						android:layout_alignParentTop="true" />
 
 					<ImageButton
 						android:id="@+id/imageButtonPlay"
@@ -48,8 +59,33 @@
 
 				</RelativeLayout>
 
-
 			</androidx.cardview.widget.CardView>
+
+			<TextView
+				android:id="@+id/textViewModelTitle"
+				app:layout_constraintTop_toBottomOf="@id/cardViewVideo"
+				app:layout_constraintStart_toStartOf="parent"
+				android:layout_marginTop="20dp"
+				android:textSize="22sp"
+				android:textColor="#040415"
+				android:textStyle="bold"
+				android:text="Model"
+				android:layout_width="wrap_content"
+				android:layout_height="wrap_content"
+				/>
+
+			<TextView
+				app:layout_constraintTop_toBottomOf="@id/textViewModelTitle"
+				app:layout_constraintStart_toStartOf="parent"
+				android:layout_marginTop="7dp"
+				android:textSize="16sp"
+				android:text="Watch Video"
+				android:textColor="#737377"
+				android:textStyle="bold"
+				android:layout_width="wrap_content"
+				android:layout_height="wrap_content"
+				/>
+
 		</androidx.constraintlayout.widget.ConstraintLayout>
 
 	</ScrollView>

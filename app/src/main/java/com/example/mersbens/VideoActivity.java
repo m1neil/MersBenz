@@ -1,6 +1,7 @@
 package com.example.mersbens;
 
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.appcompat.widget.Toolbar;
 
 import android.content.Intent;
 import android.os.Bundle;
@@ -8,6 +9,7 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ImageButton;
 import android.widget.MediaController;
+import android.widget.TextView;
 import android.widget.VideoView;
 
 public class VideoActivity extends AppCompatActivity {
@@ -19,6 +21,11 @@ public class VideoActivity extends AppCompatActivity {
 
 		Intent intent = getIntent();
 		int pathVideo = intent.getIntExtra("video", 0);
+		String model = intent.getStringExtra("model");
+
+		Toolbar toolbar = findViewById(R.id.toolBar);
+		toolbar.setTitle(model);
+		setSupportActionBar(toolbar);
 
 		VideoView videoView = findViewById(R.id.videoView);
 		videoView.setVideoPath("android.resource://" + getPackageName() + "/" + pathVideo);
@@ -36,5 +43,8 @@ public class VideoActivity extends AppCompatActivity {
 				imageButton.setVisibility(View.GONE);
 			}
 		});
+
+		TextView textViewTitle = findViewById(R.id.textViewModelTitle);
+		textViewTitle.setText(model);
 	}
 }
