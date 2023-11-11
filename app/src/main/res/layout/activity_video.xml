@@ -40,7 +40,8 @@
 
 				<RelativeLayout
 					android:layout_width="match_parent"
-					android:layout_height="450dp">
+					android:background="@color/mainColorApp"
+					android:layout_height="500dp">
 
 					<VideoView
 						android:id="@+id/videoView"
