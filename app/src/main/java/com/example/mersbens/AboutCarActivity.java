@@ -26,7 +26,10 @@ public class AboutCarActivity extends AppCompatActivity {
 		textViewTankCapacity,
 		textViewTransmission,
 		textViewDoorAndPlaces,
-		textViewDriveUnit;
+		textViewDriveUnit,
+		textViewEngineName,
+		textViewEngineDesc,
+		textViewSuspensionDesc;
 
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
@@ -47,6 +50,9 @@ public class AboutCarActivity extends AppCompatActivity {
 		textViewTransmission = findViewById(R.id.textViewTransmission);
 		textViewDoorAndPlaces = findViewById(R.id.textViewDoor);
 		textViewDriveUnit = findViewById(R.id.textViewDriveUnit);
+		textViewEngineName = findViewById(R.id.textViewEngine);
+		textViewEngineDesc = findViewById(R.id.textViewEngineDesc);
+		textViewSuspensionDesc = findViewById(R.id.textViewSuspensionDesc);
 
 		Intent intent = getIntent();
 		int id = intent.getIntExtra("idCar", 1);
@@ -64,6 +70,9 @@ public class AboutCarActivity extends AppCompatActivity {
 		textViewTransmission.setText(car.getTypeTransmission());
 		textViewDoorAndPlaces.setText(car.getCountDoorsAndPlaces());
 		textViewDriveUnit.setText(car.getDriveUnit());
+		textViewEngineName.setText(car.getEngine());
+		textViewEngineDesc.setText(car.getEngineDescr());
+		textViewSuspensionDesc.setText(car.getSuspensionDescr());
 
 		imageViewCar.setOnClickListener(new View.OnClickListener() {
 			@Override

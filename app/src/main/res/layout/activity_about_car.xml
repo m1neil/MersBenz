@@ -14,52 +14,52 @@
 		app:layout_constraintHorizontal_bias="1.0"
 		app:layout_constraintStart_toStartOf="parent"
 		app:layout_constraintTop_toTopOf="parent" />
-	
+
 	<ScrollView
-		app:layout_constraintTop_toTopOf="parent"
-		app:layout_constraintStart_toStartOf="parent"
-		app:layout_constraintEnd_toEndOf="parent"
 		android:layout_width="match_parent"
-		android:layout_height="wrap_content">
-		
+		android:layout_height="wrap_content"
+		app:layout_constraintEnd_toEndOf="parent"
+		app:layout_constraintStart_toStartOf="parent"
+		app:layout_constraintTop_toTopOf="parent">
+
 		<androidx.constraintlayout.widget.ConstraintLayout
 			android:layout_width="match_parent"
 			android:layout_height="wrap_content"
 			android:paddingStart="15dp"
-			android:paddingEnd="15dp"
 			android:paddingTop="90dp"
-			android:paddingBottom="25dp"
-			>
+			android:paddingEnd="15dp"
+			android:paddingBottom="25dp">
 
 			<androidx.cardview.widget.CardView
 				android:id="@+id/CardView"
 				android:layout_width="match_parent"
-				app:cardCornerRadius="15dp"
 				android:layout_height="230dp"
+				android:layout_marginBottom="10dp"
+				app:cardCornerRadius="15dp"
 				app:layout_constraintEnd_toEndOf="parent"
 				app:layout_constraintStart_toStartOf="parent"
-				app:layout_constraintTop_toTopOf="parent"
-				android:layout_marginBottom="10dp"
-				>
+				app:layout_constraintTop_toTopOf="parent">
+
 				<RelativeLayout
 					android:layout_width="match_parent"
 					android:layout_height="wrap_content">
+
 					<ImageView
-						android:layout_alignParentTop="true"
-						android:layout_alignParentStart="true"
 						android:id="@+id/imageViewCar"
-						android:scaleType="centerCrop"
 						android:layout_width="match_parent"
 						android:layout_height="match_parent"
-						/>
+						android:layout_alignParentStart="true"
+						android:layout_alignParentTop="true"
+						android:scaleType="centerCrop" />
+
 					<ImageButton
-						android:background="@drawable/icon_play"
-						android:layout_marginTop="15dp"
-						android:layout_marginEnd="15dp"
+						android:layout_width="35dp"
+						android:layout_height="35dp"
 						android:layout_alignParentTop="true"
 						android:layout_alignParentEnd="true"
-						android:layout_width="35dp"
-						android:layout_height="35dp"/>
+						android:layout_marginTop="15dp"
+						android:layout_marginEnd="15dp"
+						android:background="@drawable/icon_play" />
 				</RelativeLayout>
 
 			</androidx.cardview.widget.CardView>
@@ -104,15 +104,14 @@
 				android:id="@+id/relativeLayoutYear"
 				android:layout_width="wrap_content"
 				android:layout_height="wrap_content"
-				android:background="@drawable/background_orange_radius"
 				android:layout_marginTop="10dp"
-				app:layout_constraintStart_toStartOf="parent"
-				app:layout_constraintTop_toBottomOf="@+id/textViewDescription"
-				android:paddingTop="3dp"
-				android:paddingBottom="3dp"
+				android:background="@drawable/background_orange_radius"
 				android:paddingLeft="8dp"
+				android:paddingTop="3dp"
 				android:paddingRight="8dp"
-				>
+				android:paddingBottom="3dp"
+				app:layout_constraintStart_toStartOf="parent"
+				app:layout_constraintTop_toBottomOf="@+id/textViewDescription">
 
 				<ImageView
 					android:id="@+id/imageViewYear"
@@ -125,25 +124,25 @@
 
 				<TextView
 					android:id="@+id/textViewYear"
-					android:layout_marginTop="2dp"
 					android:layout_width="wrap_content"
 					android:layout_height="wrap_content"
 					android:layout_alignParentTop="true"
+					android:layout_marginTop="2dp"
 					android:layout_toEndOf="@+id/imageViewYear"
 					android:text="2000 рік"
 					android:textColor="@color/white" />
 			</RelativeLayout>
 
 			<RelativeLayout
-				android:background="@drawable/background_orange_radius"
 				android:id="@+id/relativeLayoutCountry"
 				android:layout_width="wrap_content"
 				android:layout_height="wrap_content"
-				android:paddingTop="3dp"
-				android:paddingBottom="3dp"
-				android:paddingStart="8dp"
-				android:paddingEnd="8dp"
 				android:layout_marginTop="10dp"
+				android:background="@drawable/background_orange_radius"
+				android:paddingStart="8dp"
+				android:paddingTop="3dp"
+				android:paddingEnd="8dp"
+				android:paddingBottom="3dp"
 				app:layout_constraintStart_toStartOf="parent"
 				app:layout_constraintTop_toBottomOf="@+id/relativeLayoutYear">
 
@@ -158,26 +157,26 @@
 
 				<TextView
 					android:id="@+id/textViewCountry"
-					android:layout_marginTop="2dp"
 					android:layout_width="wrap_content"
 					android:layout_height="wrap_content"
 					android:layout_alignParentTop="true"
+					android:layout_marginTop="2dp"
 					android:layout_toEndOf="@+id/imageViewCountry"
 					android:text="Німечина"
 					android:textColor="@color/white" />
 			</RelativeLayout>
 
 			<RelativeLayout
-				android:background="@drawable/background_orange_radius"
 				android:id="@+id/relativeLayoutMaxSpeed"
 				android:layout_width="wrap_content"
 				android:layout_height="wrap_content"
-				android:paddingTop="3dp"
-				android:paddingBottom="3dp"
-				android:paddingLeft="8dp"
-				android:paddingRight="8dp"
-				android:layout_marginTop="10dp"
 				android:layout_marginStart="10dp"
+				android:layout_marginTop="10dp"
+				android:background="@drawable/background_orange_radius"
+				android:paddingLeft="8dp"
+				android:paddingTop="3dp"
+				android:paddingRight="8dp"
+				android:paddingBottom="3dp"
 				app:layout_constraintStart_toEndOf="@+id/relativeLayoutYear"
 				app:layout_constraintTop_toBottomOf="@+id/textViewDescription">
 
@@ -192,26 +191,26 @@
 
 				<TextView
 					android:id="@+id/textViewMaxSpeed"
-					android:layout_marginTop="2dp"
 					android:layout_width="wrap_content"
 					android:layout_height="wrap_content"
 					android:layout_alignParentTop="true"
+					android:layout_marginTop="2dp"
 					android:layout_toEndOf="@+id/imageViewMaxSpeed"
 					android:text="210 км/год"
 					android:textColor="@color/white" />
 			</RelativeLayout>
 
 			<RelativeLayout
-				android:background="@drawable/background_orange_radius"
 				android:id="@+id/relativeLayoutTankCapacity"
 				android:layout_width="wrap_content"
 				android:layout_height="wrap_content"
-				android:paddingTop="3dp"
-				android:paddingBottom="3dp"
-				android:paddingLeft="8dp"
-				android:paddingRight="8dp"
-				android:layout_marginTop="10dp"
 				android:layout_marginStart="10dp"
+				android:layout_marginTop="10dp"
+				android:background="@drawable/background_orange_radius"
+				android:paddingLeft="8dp"
+				android:paddingTop="3dp"
+				android:paddingRight="8dp"
+				android:paddingBottom="3dp"
 				app:layout_constraintStart_toEndOf="@+id/relativeLayoutCountry"
 				app:layout_constraintTop_toBottomOf="@+id/relativeLayoutMaxSpeed">
 
@@ -226,10 +225,10 @@
 
 				<TextView
 					android:id="@+id/textViewTankCapacity"
-					android:layout_marginTop="2dp"
 					android:layout_width="wrap_content"
 					android:layout_height="wrap_content"
 					android:layout_alignParentTop="true"
+					android:layout_marginTop="2dp"
 					android:layout_toEndOf="@+id/imageViewTankCapacity"
 					android:text="88 літрів"
 					android:textColor="@color/white" />
@@ -237,20 +236,18 @@
 
 			<RelativeLayout
 				android:id="@+id/relativeLayoutAutomatic"
-				android:layout_marginTop="15dp"
 				android:layout_width="wrap_content"
 				android:layout_height="wrap_content"
-				app:layout_constraintTop_toBottomOf="@+id/relativeLayoutCountry"
+				android:layout_marginTop="15dp"
 				app:layout_constraintStart_toStartOf="parent"
-				>
+				app:layout_constraintTop_toBottomOf="@+id/relativeLayoutCountry">
 
 				<ImageView
 					android:id="@+id/imageViewTransmission"
-					android:layout_width="16dp"
-					android:layout_height="16dp"
+					android:layout_width="20dp"
+					android:layout_height="20dp"
 					android:layout_alignParentStart="true"
 					android:layout_alignParentTop="true"
-					android:layout_marginTop="2dp"
 					android:layout_marginEnd="5dp"
 					android:src="@drawable/icon_transmission" />
 
@@ -259,6 +256,7 @@
 					android:layout_width="wrap_content"
 					android:layout_height="wrap_content"
 					android:layout_alignParentTop="true"
+					android:layout_centerHorizontal="true"
 					android:layout_toEndOf="@+id/imageViewTransmission"
 					android:text="Автоматична"
 					android:textColor="#001D42"
@@ -267,20 +265,18 @@
 
 			<RelativeLayout
 				android:id="@+id/relativeLayoutDoor"
-				android:layout_marginTop="7dp"
 				android:layout_width="wrap_content"
 				android:layout_height="wrap_content"
+				android:layout_marginTop="7dp"
 				app:layout_constraintStart_toStartOf="parent"
-				app:layout_constraintTop_toBottomOf="@+id/relativeLayoutAutomatic"
-				>
+				app:layout_constraintTop_toBottomOf="@+id/relativeLayoutAutomatic">
 
 				<ImageView
 					android:id="@+id/imageViewDoor"
-					android:layout_width="16dp"
-					android:layout_height="16dp"
+					android:layout_width="20dp"
+					android:layout_height="20dp"
 					android:layout_alignParentStart="true"
 					android:layout_alignParentTop="true"
-					android:layout_marginTop="2dp"
 					android:layout_marginEnd="5dp"
 					android:src="@drawable/icon_door" />
 
@@ -289,6 +285,7 @@
 					android:layout_width="wrap_content"
 					android:layout_height="wrap_content"
 					android:layout_alignParentTop="true"
+					android:layout_centerVertical="true"
 					android:layout_toEndOf="@+id/imageViewDoor"
 					android:text="2 дверей 4 місця"
 					android:textColor="#001D42"
@@ -297,20 +294,18 @@
 
 			<RelativeLayout
 				android:id="@+id/relativeLayoutDriveUnit"
-				android:layout_marginTop="7dp"
 				android:layout_width="wrap_content"
 				android:layout_height="wrap_content"
+				android:layout_marginTop="7dp"
 				app:layout_constraintStart_toStartOf="parent"
-				app:layout_constraintTop_toBottomOf="@+id/relativeLayoutDoor"
-				>
+				app:layout_constraintTop_toBottomOf="@+id/relativeLayoutDoor">
 
 				<ImageView
 					android:id="@+id/imageViewDriveUnit"
-					android:layout_width="16dp"
-					android:layout_height="16dp"
+					android:layout_width="20dp"
+					android:layout_height="20dp"
 					android:layout_alignParentStart="true"
 					android:layout_alignParentTop="true"
-					android:layout_marginTop="2dp"
 					android:layout_marginEnd="5dp"
 					android:src="@drawable/icon_car_repair" />
 
@@ -319,19 +314,114 @@
 					android:layout_width="wrap_content"
 					android:layout_height="wrap_content"
 					android:layout_alignParentTop="true"
+					android:layout_centerVertical="true"
 					android:layout_toEndOf="@+id/imageViewDriveUnit"
 					android:text="Повний"
 					android:textColor="#001D42"
 					android:textStyle="bold" />
 			</RelativeLayout>
 
+			<RelativeLayout
+				android:id="@+id/relativeLayoutEngine"
+				android:layout_width="wrap_content"
+				android:layout_height="wrap_content"
+				android:layout_marginTop="7dp"
+				app:layout_constraintStart_toStartOf="parent"
+				app:layout_constraintTop_toBottomOf="@+id/relativeLayoutDriveUnit">
+
+				<ImageView
+					android:id="@+id/imageViewEngine"
+					android:layout_width="20dp"
+					android:layout_height="20dp"
+					android:layout_alignParentStart="true"
+					android:layout_alignParentTop="true"
+					android:layout_marginEnd="5dp"
+					android:src="@drawable/car_engine" />
+
+				<TextView
+					android:id="@+id/textViewEngine"
+					android:layout_width="wrap_content"
+					android:layout_height="wrap_content"
+					android:layout_alignParentTop="true"
+					android:layout_centerVertical="true"
+					android:layout_toEndOf="@+id/imageViewEngine"
+					android:text="Назва"
+					android:textColor="#001D42"
+					android:textStyle="bold" />
+			</RelativeLayout>
+
+			<RelativeLayout
+				android:layout_width="match_parent"
+				android:layout_height="wrap_content"
+				android:layout_marginTop="15dp"
+				app:layout_constraintStart_toStartOf="parent"
+				app:layout_constraintTop_toBottomOf="@+id/relativeLayoutEngine">
+
+				<RelativeLayout
+					android:id="@+id/relativeLayoutEngineDescr"
+					android:layout_width="match_parent"
+					android:layout_height="wrap_content"
+					android:layout_alignParentStart="true"
+					android:layout_alignParentTop="true"
+					android:layout_marginBottom="10dp">
+
+					<TextView
+						android:id="@+id/textViewEngineTitle"
+						android:layout_width="match_parent"
+						android:layout_height="wrap_content"
+						android:layout_alignParentStart="true"
+						android:layout_alignParentTop="true"
+						android:textStyle="bold"
+						android:textSize="18sp"
+						android:text="Двигун" />
+
+					<TextView
+						android:id="@+id/textViewEngineDesc"
+						android:layout_width="match_parent"
+						android:layout_height="wrap_content"
+						android:layout_below="@+id/textViewEngineTitle"
+						android:layout_marginTop="7dp"
+						android:textSize="16sp"
+						android:text="Опис двигуна" />
+
+				</RelativeLayout>
+
+				<RelativeLayout
+					android:id="@+id/relativeLayoutSuspension"
+					android:layout_width="match_parent"
+					android:layout_height="wrap_content"
+					android:layout_below="@+id/relativeLayoutEngineDescr"
+					android:layout_alignParentStart="true"
+					android:layout_marginBottom="10dp">
+
+					<TextView
+						android:id="@+id/textViewSuspensionTitle"
+						android:layout_width="match_parent"
+						android:layout_height="wrap_content"
+						android:layout_alignParentStart="true"
+						android:layout_alignParentTop="true"
+						android:textStyle="bold"
+						android:textSize="18sp"
+						android:text="Підвіска " />
+
+					<TextView
+						android:id="@+id/textViewSuspensionDesc"
+						android:layout_width="match_parent"
+						android:layout_height="wrap_content"
+						android:layout_below="@+id/textViewSuspensionTitle"
+						android:layout_marginTop="7dp"
+						android:textSize="16sp"
+						android:text="Опис підвіска " />
+
+				</RelativeLayout>
+
+			</RelativeLayout>
+
+
 		</androidx.constraintlayout.widget.ConstraintLayout>
-		
 
 
 	</ScrollView>
-
-
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>

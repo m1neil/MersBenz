@@ -29,7 +29,7 @@ public class Utils {
 	public static final String KEY_SUSPENSION_DESCR = "suspension"; // описание подвески
 	public static final String KEY_TRANSMISSION_DESCR = "transmission_descr"; // описание трансмисии
 	public static final String KEY_BRAKE_SYSTEM_DESCR = "brake_system_descr"; // описание торможной системы
-	public static final String KEY_WHEELS_TIRES_DESCR = "wheelse_tires_descr"; // описание колес и шин
+	public static final String KEY_WHEELS_TIRES_DESCR = "wheels_tires_descr"; // описание колес и шин
 	public static final String KEY_ELECTRICAL_EQUIPMENT = "electrical_equipment"; // электрооборудование
 
 }

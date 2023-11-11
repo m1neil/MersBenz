@@ -17,6 +17,13 @@ public class Car {
 	private String fuelTankCapacity;
 	private String middlePrice;
 	private String category;
+	private String engine;
+	private String engineDescr;
+	private String suspensionDescr;
+	private String transmissionDescr;
+	private String brakeSystemDescr;
+	private String wheelsTiresDescr;
+	private String electricalEquipment;
 
 	public Car() {
 	}
@@ -24,7 +31,9 @@ public class Car {
 	public Car(int imagePath, int imagePathSecond, int videoPath, String model, String description, String yearProduced,
 				  String countryProduced, String countDoorsAndPlaces, String maxSpeed,
 				  String typeTransmission, String driveUnit, String fuelType, String fuelTankCapacity,
-				  String middlePrice, String category) {
+				  String middlePrice, String category, String engine, String engineDescr,
+				  String suspensionDescr, String transmissionDescr, String brakeSystemDescr,
+				  String wheelsTiresDescr, String electricalEquipment) {
 		this.imagePath = imagePath;
 		this.imagePathSecond = imagePathSecond;
 		this.videoPath = videoPath;
@@ -40,12 +49,21 @@ public class Car {
 		this.fuelTankCapacity = fuelTankCapacity;
 		this.middlePrice = middlePrice;
 		this.category = category;
+		this.engine = engine;
+		this.engineDescr = engineDescr;
+		this.suspensionDescr = suspensionDescr;
+		this.transmissionDescr = transmissionDescr;
+		this.brakeSystemDescr = brakeSystemDescr;
+		this.wheelsTiresDescr = wheelsTiresDescr;
+		this.electricalEquipment = electricalEquipment;
 	}
 
 	public Car(int id, int imagePath, int imagePathSecond, int videoPath, String model, String description,
 				  String yearProduced, String countryProduced, String countDoorsAndPlaces,
 				  String maxSpeed, String typeTransmission, String driveUnit, String fuelType,
-				  String fuelTankCapacity, String middlePrice, String category) {
+				  String fuelTankCapacity, String middlePrice, String category,  String engine,
+				  String engineDescr, String suspensionDescr, String transmissionDescr,
+				  String brakeSystemDescr, String wheelsTiresDescr, String electricalEquipment) {
 		this.id = id;
 		this.imagePath = imagePath;
 		this.imagePathSecond = imagePathSecond;
@@ -62,6 +80,13 @@ public class Car {
 		this.fuelTankCapacity = fuelTankCapacity;
 		this.middlePrice = middlePrice;
 		this.category = category;
+		this.engine = engine;
+		this.engineDescr = engineDescr;
+		this.suspensionDescr = suspensionDescr;
+		this.transmissionDescr = transmissionDescr;
+		this.brakeSystemDescr = brakeSystemDescr;
+		this.wheelsTiresDescr = wheelsTiresDescr;
+		this.electricalEquipment = electricalEquipment;
 	}
 
 	public int getImagePathSecond() {
@@ -190,5 +215,61 @@ public class Car {
 
 	public void setCategory(String category) {
 		this.category = category;
+	}
+
+	public String getEngine() {
+		return engine;
+	}
+
+	public void setEngine(String engine) {
+		this.engine = engine;
+	}
+
+	public String getEngineDescr() {
+		return engineDescr;
+	}
+
+	public void setEngineDescr(String engineDescr) {
+		this.engineDescr = engineDescr;
+	}
+
+	public String getSuspensionDescr() {
+		return suspensionDescr;
+	}
+
+	public void setSuspensionDescr(String suspensionDescr) {
+		this.suspensionDescr = suspensionDescr;
+	}
+
+	public String getTransmissionDescr() {
+		return transmissionDescr;
+	}
+
+	public void setTransmissionDescr(String transmissionDescr) {
+		this.transmissionDescr = transmissionDescr;
+	}
+
+	public String getBrakeSystemDescr() {
+		return brakeSystemDescr;
+	}
+
+	public void setBrakeSystemDescr(String brakeSystemDescr) {
+		this.brakeSystemDescr = brakeSystemDescr;
+	}
+
+	public String getWheelsTiresDescr() {
+		return wheelsTiresDescr;
+	}
+
+	public void setWheelsTiresDescr(String wheelsTiresDescr) {
+		this.wheelsTiresDescr = wheelsTiresDescr;
+	}
+
+	public String getElectricalEquipment() {
+		return electricalEquipment;
+	}
+
+	public void setElectricalEquipment(String electricalEquipment) {
+		this.electricalEquipment = electricalEquipment;
 	}
 }

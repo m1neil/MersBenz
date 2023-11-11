@@ -32,7 +32,14 @@ public class DatabaseHelper extends SQLiteOpenHelper {
 			+ Utils.KEY_FUEL_TYPE + " TEXT,"
 			+ Utils.KEY_FUEL_TANK_CAPACITY + " TEXT,"
 			+ Utils.KEY_MIDDLE_PRICE + " TEXT,"
-			+ Utils.KEY_CATEGORY + " TEXT" +
+			+ Utils.KEY_CATEGORY + " TEXT,"
+			+ Utils.KEY_ENGINE + " TEXT,"
+			+ Utils.KEY_ENGINE_DESCR + " TEXT,"
+			+ Utils.KEY_SUSPENSION_DESCR + " TEXT,"
+			+ Utils.KEY_TRANSMISSION_DESCR + " TEXT,"
+			+ Utils.KEY_BRAKE_SYSTEM_DESCR + " TEXT,"
+			+ Utils.KEY_WHEELS_TIRES_DESCR + " TEXT,"
+			+ Utils.KEY_ELECTRICAL_EQUIPMENT + " TEXT" +
 			")";
 
 		db.execSQL(createTable);
@@ -63,6 +70,13 @@ public class DatabaseHelper extends SQLiteOpenHelper {
 		contentValues.put(Utils.KEY_FUEL_TANK_CAPACITY, car.getFuelTankCapacity());
 		contentValues.put(Utils.KEY_MIDDLE_PRICE, car.getMiddlePrice());
 		contentValues.put(Utils.KEY_CATEGORY, car.getCategory());
+		contentValues.put(Utils.KEY_ENGINE, car.getEngine());
+		contentValues.put(Utils.KEY_ENGINE_DESCR, car.getEngineDescr());
+		contentValues.put(Utils.KEY_SUSPENSION_DESCR, car.getSuspensionDescr());
+		contentValues.put(Utils.KEY_TRANSMISSION_DESCR, car.getTransmissionDescr());
+		contentValues.put(Utils.KEY_BRAKE_SYSTEM_DESCR, car.getBrakeSystemDescr());
+		contentValues.put(Utils.KEY_WHEELS_TIRES_DESCR, car.getWheelsTiresDescr());
+		contentValues.put(Utils.KEY_ELECTRICAL_EQUIPMENT, car.getElectricalEquipment());
 
 		db.insert(Utils.TABLE_NAME_CARS, null, contentValues);
 		db.close();
@@ -117,6 +131,8 @@ public class DatabaseHelper extends SQLiteOpenHelper {
 				Utils.KEY_IMAGE_PATH_SECOND, Utils.KEY_VIDEO_PATH, Utils.KEY_DESCRIPTION, Utils.KEY_YEAR_PRODUCED,
 				Utils.KEY_COUNTRY_PRODUCED, Utils.KEY_DOORS_AND_PLACES, Utils.KEY_MAX_SPEED, Utils.KEY_TYPE_TRANSMISSION,
 				Utils.KEY_DRIVE_UNIT, Utils.KEY_FUEL_TYPE, Utils.KEY_FUEL_TANK_CAPACITY, Utils.KEY_MIDDLE_PRICE,
+				Utils.KEY_ENGINE, Utils.KEY_ENGINE_DESCR, Utils.KEY_SUSPENSION_DESCR, Utils.KEY_TRANSMISSION_DESCR,
+				Utils.KEY_BRAKE_SYSTEM_DESCR, Utils.KEY_WHEELS_TIRES_DESCR, Utils.KEY_ELECTRICAL_EQUIPMENT,
 			}, Utils.KEY_ID + "=?", new String[]{String.valueOf(id)},
 			null, null,
 			null, null);
@@ -138,6 +154,13 @@ public class DatabaseHelper extends SQLiteOpenHelper {
 				int idFuelType = cursor.getColumnIndex(Utils.KEY_FUEL_TYPE);
 				int idFuelTankCapacity = cursor.getColumnIndex(Utils.KEY_FUEL_TANK_CAPACITY);
 				int idMiddlePrice = cursor.getColumnIndex(Utils.KEY_MIDDLE_PRICE);
+				int idEngine = cursor.getColumnIndex(Utils.KEY_ENGINE);
+				int idEngineDesc = cursor.getColumnIndex(Utils.KEY_ENGINE_DESCR);
+				int idSuspensionDesr = cursor.getColumnIndex(Utils.KEY_SUSPENSION_DESCR);
+				int idTransmissionDesr = cursor.getColumnIndex(Utils.KEY_TRANSMISSION_DESCR);
+				int idBrakeSystemDesc = cursor.getColumnIndex(Utils.KEY_BRAKE_SYSTEM_DESCR);
+				int idWheelsTires = cursor.getColumnIndex(Utils.KEY_WHEELS_TIRES_DESCR);
+				int idElectricalEquipment = cursor.getColumnIndex(Utils.KEY_ELECTRICAL_EQUIPMENT);
 
 				car.setId(cursor.getInt(idCar));
 				car.setModel(cursor.getString(idModel));
@@ -153,6 +176,13 @@ public class DatabaseHelper extends SQLiteOpenHelper {
 				car.setFuelType(cursor.getString(idFuelType));
 				car.setFuelTankCapacity(cursor.getString(idFuelTankCapacity));
 				car.setMiddlePrice(cursor.getString(idMiddlePrice));
+				car.setEngine(cursor.getString(idEngine));
+				car.setEngineDescr(cursor.getString(idEngineDesc));
+				car.setSuspensionDescr(cursor.getString(idSuspensionDesr));
+				car.setTransmissionDescr(cursor.getString(idTransmissionDesr));
+				car.setBrakeSystemDescr(cursor.getString(idBrakeSystemDesc));
+				car.setWheelsTiresDescr(cursor.getString(idWheelsTires));
+				car.setElectricalEquipment(cursor.getString(idElectricalEquipment));
 
 			} finally {
 				cursor.close();
