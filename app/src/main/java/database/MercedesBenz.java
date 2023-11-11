@@ -14,30 +14,101 @@ public class MercedesBenz {
 	}
 
 	private void initCars() {
-		mercedesAmgGt = new Car(R.drawable.merc_amg_gt, R.drawable.merc_amg_gt_2, R.raw.merc_amg_gt,
-			"Mercedes-AMG GT", "Mercedes-AMG GT - це спортивний автомобіль, який вперше був представлений у " +
-			"2014 році. Його виробляє німецький автовиробник Mercedes-Benz. Автомобіль доступний " +
-			"у двох варіантах кузова: купе та кабріолет.", "2014",
-			"Німеччина", "2 двері і 4 місця", "310 км/год",
-			"Автоматична ", "Повний", "Бензин", "66 літрів",
-			"1 084 834$", "sport", "V8 M178",
-			"На вибір, автомобіль оснащується бітурбованими 4.0 л двигуном V8 M178 BlueDIRECT, що розвиває два варіанти потужності : 462 (600 Нм ) і 510 к.с (650 Нм ). На силовому агрегаті встановлюються головки циліндрів із цирконієвим сплавом, завдяки чому зменшується тертя та підвищується коефіцієнт теплопровідності. У двигуні застосовується технологія мастила з сухим картером, як і в Mercedes-Benz SLS AMG . Швидкість розгону AMG GT S від 0 до 60 миль/година становить 3,8 секунд  .\n" +
-				"Мотор, кермо та підвіску можна налаштувати під стиль водіння. Для цього передбачені кілька варіантів - individual , comfort , race , sport і sport.\n" +
-				"Екстремальна версія в кузові купе Mercedes-AMG GT R оснащується бітурбованим 4-літровим бензиновим двигуном із прямим упорскуванням палива. Потужність силового агрегату складає 430 кВт (585 л.с.). Швидкість розгону від 0 до 100 км/год становить 3,6 секунди. Максимальна швидкість становить 318 км/год.\n" +
-				"Версії в кузові купе оснащуються тим же бітурбованим двигуном, що і купе, але з модифікованими налаштуваннями. Продуктивність базової модифікації складає 476 к.с., топової (AMG GT C Roadster) - 557 кінських сил.",
-			"AMG GT реалізує переднє середньомоторне, задньопривідне компонування. Двигун розташований усередині колісної бази автомобіля. Шасі спорткара виготовляється із сплаву алюмінію, капот із магнію, а кришка багажника зі сталі, подвійні поперечні важелі спереду та ззаду із кованого алюмінію . Вага автомобіля складає близько 1629 кг.\n" +
-				"Модифікація AMG GT C оснащується повнокерованим шасі та адаптивною підвіскою. У базовій версії родстера встановлений диференціал, що самоблокується, в AMG GT C - електроннокерований",
-			"Потужність силового агрегату, встановленого на автомобілі Mercedes-AMG GT, передається на задні колеса через роботизовану преселективну 7-ступінчасту коробку AMG SPEEDSHIFT DCT з подвійним зчепленням на диференціал обмеженого ковзання, що перекочувала в удосконаленому вигляді з AMG . Розважування складає 47:53 на користь задньої частини.\n" +
-				"Модифікації в кузові родстер оснащуються тією ж 7-ступінчастою роботизованою АКПП, але з новою програмою управління і зміненими передавальними числами: перший ступінь став довшим, а вища (сьома) і головна передача — коротша.",
-			"на всіх модифікація автомобіля AMG GT встановлена \u200B\u200Bвисокопродуктивна гальмівна система. Базова версія AMG GT оснащується вентильованими перфорованими гальмівними дисками діаметром 360 мм з обох боків. На модифікацію з літерою «S» встановлюються гальмівні диски діаметром 390 мм спереду і 360 мм ззаду. Керамічна високопродуктивна композитна гальмівна система, що має меншу вагу, більш тривалий термін служби, доступна для обох моделей як опція. У такому варіанті в передній частині автомобіля встановлюються гальмівні диски діаметром 402 мм, а в задній - 360 мм.\n" +
-				"Модифікація Mercedes-AMG GT R у базовій комплектації оснащується вентильованими перфорованими гальмівними дисками діаметром 390 мм спереду та 360 мм ззаду. Як і базовому купе AMG GT, даної версії доступна високопродуктивна керамічна гальмівна система (на замовлення).\n" +
-				"Версії в кузові родстер оснащуються тією ж гальмівною системою, що і AMG GT / AMG GT S: у базовому варіанті GT Roadtser встановлені перфоровані гальмівні диски діаметром 360 мм з обох боків автомобіля, в топовій версії AMG GT C встановлені ті ж диски, але діаметром мм спереду та 360 мм ззаду",
-			"Як у кузові купе, так і як родстер, автомобіль оснащується 19-дюймовими передніми (9.0 J x 19) і 19 (11 J x 19) або 20-дюймовими (12.0 J x 20) задніми литими дисками з червоними гальмівними супортами.\n" +
-				"У базовій версії автомобіля в кузові родстер встановлюються широкопрофільні шини розміром 255/35 R 19 спереду та 295/35 R 19 ззаду. У модифікації AMG GT C Roadtser спереду встановлюються шини розміром 265/35 R19, ззаду - 305/30 R 20",
-			"Автомобіль Mercedes-AMG GT оснащений адаптивною AMG підвіскою, 3-етапною системою AMG ESP , парктрониками, системою об'ємного звучання Burmester , технологією Keyless-Go , системою COMAND , камерою заднього виду, системою Collision Prevention Assist PLUS , кріслами AMG 8 подушками безпеки, 2-зональним клімат-контролем THERMOTRONIC , круїз-контролем з технологією SPEEDTRONIC та світлодіодними фарами.");
-
-		cars.add(mercedesAmgGt);
+		cars.add(new Car(
+			UtilTexts.MERC_1_IMAGE_1,
+			UtilTexts.MERC_1_IMAGE_2,
+			UtilTexts.MERC_1_VIDEO,
+			UtilTexts.MERC_1_MODEL,
+			UtilTexts.MERC_1_DESCRIPTION,
+			UtilTexts.MERC_1_YEAR,
+			UtilTexts.MERC_1_COUNTRY,
+			UtilTexts.MERC_1_DOORS_PLACES,
+			UtilTexts.MERC_1_MAX_SPEED,
+			UtilTexts.MERC_1_TYPE_TRANSMISSION,
+			UtilTexts.MERC_1_DRIVE_UNIT,
+			UtilTexts.MERC_1_FUEL_TYPE,
+			UtilTexts.MERC_1_FUEL_TANK_CAPACITY,
+			UtilTexts.MERC_1_MIDDLE_PRICE,
+			UtilTexts.MERC_1_CATEGORY,
+			UtilTexts.MERC_1_ENGINE,
+			UtilTexts.MERC_1_ENGINE_DESCR,
+			UtilTexts.MERC_1_SUSPENSION_DESCR,
+			UtilTexts.MERC_1_TRANSMISSION_DESCR,
+			UtilTexts.MERC_1_BRAKE_SYSTEM_DESCR,
+			UtilTexts.MERC_1_WHEELS_TIRES_DESCR,
+			UtilTexts.MERC_1_ELECTRICAL_EQUIPMENT));
+		cars.add(new Car(
+			UtilTexts.MERC_2_IMAGE_1,
+			UtilTexts.MERC_2_IMAGE_2,
+			UtilTexts.MERC_2_VIDEO,
+			UtilTexts.MERC_2_MODEL,
+			UtilTexts.MERC_2_DESCRIPTION,
+			UtilTexts.MERC_2_YEAR,
+			UtilTexts.MERC_2_COUNTRY,
+			UtilTexts.MERC_2_DOORS_PLACES,
+			UtilTexts.MERC_2_MAX_SPEED,
+			UtilTexts.MERC_2_TYPE_TRANSMISSION,
+			UtilTexts.MERC_2_DRIVE_UNIT,
+			UtilTexts.MERC_2_FUEL_TYPE,
+			UtilTexts.MERC_2_FUEL_TANK_CAPACITY,
+			UtilTexts.MERC_2_MIDDLE_PRICE,
+			UtilTexts.MERC_2_CATEGORY,
+			UtilTexts.MERC_2_ENGINE,
+			UtilTexts.MERC_2_ENGINE_DESCR,
+			UtilTexts.MERC_2_SUSPENSION_DESCR,
+			UtilTexts.MERC_2_TRANSMISSION_DESCR,
+			UtilTexts.MERC_2_BRAKE_SYSTEM_DESCR,
+			UtilTexts.MERC_2_WHEELS_TIRES_DESCR,
+			UtilTexts.MERC_2_ELECTRICAL_EQUIPMENT));
+		cars.add(new Car(
+			UtilTexts.MERC_3_IMAGE_1,
+			UtilTexts.MERC_3_IMAGE_2,
+			UtilTexts.MERC_3_VIDEO,
+			UtilTexts.MERC_3_MODEL,
+			UtilTexts.MERC_3_DESCRIPTION,
+			UtilTexts.MERC_3_YEAR,
+			UtilTexts.MERC_3_COUNTRY,
+			UtilTexts.MERC_3_DOORS_PLACES,
+			UtilTexts.MERC_3_MAX_SPEED,
+			UtilTexts.MERC_3_TYPE_TRANSMISSION,
+			UtilTexts.MERC_3_DRIVE_UNIT,
+			UtilTexts.MERC_3_FUEL_TYPE,
+			UtilTexts.MERC_3_FUEL_TANK_CAPACITY,
+			UtilTexts.MERC_3_MIDDLE_PRICE,
+			UtilTexts.MERC_3_CATEGORY,
+			UtilTexts.MERC_3_ENGINE,
+			UtilTexts.MERC_3_ENGINE_DESCR,
+			UtilTexts.MERC_3_SUSPENSION_DESCR,
+			UtilTexts.MERC_3_TRANSMISSION_DESCR,
+			UtilTexts.MERC_3_BRAKE_SYSTEM_DESCR,
+			UtilTexts.MERC_3_WHEELS_TIRES_DESCR,
+			UtilTexts.MERC_3_ELECTRICAL_EQUIPMENT));
+		cars.add(new Car(
+			UtilTexts.MERC_4_IMAGE_1,
+			UtilTexts.MERC_4_IMAGE_2,
+			UtilTexts.MERC_4_VIDEO,
+			UtilTexts.MERC_4_MODEL,
+			UtilTexts.MERC_4_DESCRIPTION,
+			UtilTexts.MERC_4_YEAR,
+			UtilTexts.MERC_4_COUNTRY,
+			UtilTexts.MERC_4_DOORS_PLACES,
+			UtilTexts.MERC_4_MAX_SPEED,
+			UtilTexts.MERC_4_TYPE_TRANSMISSION,
+			UtilTexts.MERC_4_DRIVE_UNIT,
+			UtilTexts.MERC_4_FUEL_TYPE,
+			UtilTexts.MERC_4_FUEL_TANK_CAPACITY,
+			UtilTexts.MERC_4_MIDDLE_PRICE,
+			UtilTexts.MERC_4_CATEGORY,
+			UtilTexts.MERC_4_ENGINE,
+			UtilTexts.MERC_4_ENGINE_DESCR,
+			UtilTexts.MERC_4_SUSPENSION_DESCR,
+			UtilTexts.MERC_4_TRANSMISSION_DESCR,
+			UtilTexts.MERC_4_BRAKE_SYSTEM_DESCR,
+			UtilTexts.MERC_4_WHEELS_TIRES_DESCR,
+			UtilTexts.MERC_4_ELECTRICAL_EQUIPMENT
+		));
 	}
+
 
 	public ArrayList<Car> getArrayList() {
 		return this.cars;
