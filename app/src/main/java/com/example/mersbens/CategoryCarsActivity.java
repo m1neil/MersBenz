@@ -33,6 +33,8 @@ public class CategoryCarsActivity extends AppCompatActivity {
 		DatabaseHelper db = new DatabaseHelper(CategoryCarsActivity.this);
 		List<Car> list = db.getCarByCategory(intent.getStringExtra("category"));
 
+		Log.d("size_list: ", "" + list.size());
+
 		recyclerView = findViewById(R.id.recyclerViewCars);
 		recyclerView.setHasFixedSize(true);
 		adapter = new CarCardAdapter(list, CategoryCarsActivity.this);

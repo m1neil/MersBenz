@@ -14,8 +14,17 @@ import database.DatabaseHelper;
 
 public class AboutCarActivity extends AppCompatActivity {
 
-	ImageView imageView;
-	TextView textView;
+	ImageView imageViewCar;
+	TextView textViewModelCar,
+		textViewPrice,
+		textViewDescription,
+		textViewYear,
+		textViewCountry,
+		textViewMaxSpeed,
+		textViewTankCapacity,
+		textViewTransmission,
+		textViewDoorAndPlaces,
+		textViewDriveUnit;
 
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
@@ -25,11 +34,34 @@ public class AboutCarActivity extends AppCompatActivity {
 		toolbar.setTitle("About car");
 		setSupportActionBar(toolbar);
 
+		imageViewCar = findViewById(R.id.imageViewCar);
+		textViewModelCar = findViewById(R.id.textViewModelCar);
+		textViewPrice = findViewById(R.id.textViewPrice);
+		textViewDescription = findViewById(R.id.textViewDescription);
+		textViewYear = findViewById(R.id.textViewYear);
+		textViewCountry = findViewById(R.id.textViewCountry);
+		textViewMaxSpeed = findViewById(R.id.textViewMaxSpeed);
+		textViewTankCapacity = findViewById(R.id.textViewTankCapacity);
+		textViewTransmission = findViewById(R.id.textViewTransmission);
+		textViewDoorAndPlaces = findViewById(R.id.textViewDoor);
+		textViewDriveUnit = findViewById(R.id.textViewDriveUnit);
+
 		Intent intent = getIntent();
 		int id = intent.getIntExtra("idCar", 1);
 
 		DatabaseHelper db = new DatabaseHelper(AboutCarActivity.this);
 		Car car = db.getCarById(id);
+		imageViewCar.setImageResource(car.getImagePathSecond());
+		textViewModelCar.setText(car.getModel());
+		textViewPrice.setText(car.getMiddlePrice());
+		textViewDescription.append(car.getDescription());
+		textViewYear.setText(car.getYearProduced());
+		textViewCountry.setText(car.getCountryProduced());
+		textViewMaxSpeed.setText(car.getMaxSpeed());
+		textViewTankCapacity.setText(car.getFuelTankCapacity());
+		textViewTransmission.setText(car.getTypeTransmission());
+		textViewDoorAndPlaces.setText(car.getCountDoorsAndPlaces());
+		textViewDriveUnit.setText(car.getDriveUnit());
 
 	}
 }

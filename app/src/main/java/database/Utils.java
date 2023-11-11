@@ -9,6 +9,7 @@ public class Utils {
 	public static final String KEY_ID = "id";
 	public static final String KEY_MODEL = "name_model";
 	public static final String KEY_IMAGE_PATH = "image_path";
+	public static final String KEY_IMAGE_PATH_SECOND = "image_path_second";
 	public static final String KEY_VIDEO_PATH = "video_path";
 	public static final String KEY_DESCRIPTION = "description";
 	public static final String KEY_YEAR_PRODUCED = "year_produced";

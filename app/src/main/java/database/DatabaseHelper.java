@@ -19,6 +19,7 @@ public class DatabaseHelper extends SQLiteOpenHelper {
 		String createTable = "CREATE TABLE " + Utils.TABLE_NAME_CARS + "("
 			+ Utils.KEY_ID + " INTEGER PRIMARY KEY,"
 			+ Utils.KEY_IMAGE_PATH + " INTEGER,"
+			+ Utils.KEY_IMAGE_PATH_SECOND + " INTEGER,"
 			+ Utils.KEY_VIDEO_PATH + " INTEGER,"
 			+ Utils.KEY_MODEL + " TEXT,"
 			+ Utils.KEY_DESCRIPTION + " TEXT,"
@@ -48,6 +49,7 @@ public class DatabaseHelper extends SQLiteOpenHelper {
 
 		ContentValues contentValues = new ContentValues();
 		contentValues.put(Utils.KEY_IMAGE_PATH, car.getImagePath());
+		contentValues.put(Utils.KEY_IMAGE_PATH_SECOND, car.getImagePathSecond());
 		contentValues.put(Utils.KEY_VIDEO_PATH, car.getVideoPath());
 		contentValues.put(Utils.KEY_MODEL, car.getModel());
 		contentValues.put(Utils.KEY_DESCRIPTION, car.getDescription());
@@ -112,7 +114,7 @@ public class DatabaseHelper extends SQLiteOpenHelper {
 		SQLiteDatabase db = this.getReadableDatabase();
 
 		Cursor cursor = db.query(Utils.TABLE_NAME_CARS, new String[]{Utils.KEY_ID, Utils.KEY_MODEL,
-				Utils.KEY_IMAGE_PATH, Utils.KEY_VIDEO_PATH, Utils.KEY_DESCRIPTION, Utils.KEY_YEAR_PRODUCED,
+				Utils.KEY_IMAGE_PATH_SECOND, Utils.KEY_VIDEO_PATH, Utils.KEY_DESCRIPTION, Utils.KEY_YEAR_PRODUCED,
 				Utils.KEY_COUNTRY_PRODUCED, Utils.KEY_DOORS_AND_PLACES, Utils.KEY_MAX_SPEED, Utils.KEY_TYPE_TRANSMISSION,
 				Utils.KEY_DRIVE_UNIT, Utils.KEY_FUEL_TYPE, Utils.KEY_FUEL_TANK_CAPACITY, Utils.KEY_MIDDLE_PRICE,
 			}, Utils.KEY_ID + "=?", new String[]{String.valueOf(id)},
@@ -124,7 +126,7 @@ public class DatabaseHelper extends SQLiteOpenHelper {
 				cursor.moveToFirst();
 				int idCar = cursor.getColumnIndex(Utils.KEY_ID);
 				int idModel = cursor.getColumnIndex(Utils.KEY_MODEL);
-				int idImagePath = cursor.getColumnIndex(Utils.KEY_IMAGE_PATH);
+				int idImagePath = cursor.getColumnIndex(Utils.KEY_IMAGE_PATH_SECOND);
 				int idVideoPath = cursor.getColumnIndex(Utils.KEY_VIDEO_PATH);
 				int idDescription = cursor.getColumnIndex(Utils.KEY_DESCRIPTION);
 				int idYear = cursor.getColumnIndex(Utils.KEY_YEAR_PRODUCED);
@@ -139,7 +141,7 @@ public class DatabaseHelper extends SQLiteOpenHelper {
 
 				car.setId(cursor.getInt(idCar));
 				car.setModel(cursor.getString(idModel));
-				car.setImagePath(cursor.getInt(idImagePath));
+				car.setImagePathSecond(cursor.getInt(idImagePath));
 				car.setVideoPath(cursor.getInt(idVideoPath));
 				car.setDescription(cursor.getString(idDescription));
 				car.setYearProduced(cursor.getString(idYear));

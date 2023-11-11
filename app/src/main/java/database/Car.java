@@ -3,6 +3,7 @@ package database;
 public class Car {
 	private int id;
 	private int imagePath;
+	private int imagePathSecond;
 	private int videoPath;
 	private String model;
 	private String description;
@@ -20,11 +21,12 @@ public class Car {
 	public Car() {
 	}
 
-	public Car(int imagePath, int videoPath, String model, String description, String yearProduced,
+	public Car(int imagePath, int imagePathSecond, int videoPath, String model, String description, String yearProduced,
 				  String countryProduced, String countDoorsAndPlaces, String maxSpeed,
 				  String typeTransmission, String driveUnit, String fuelType, String fuelTankCapacity,
 				  String middlePrice, String category) {
 		this.imagePath = imagePath;
+		this.imagePathSecond = imagePathSecond;
 		this.videoPath = videoPath;
 		this.model = model;
 		this.description = description;
@@ -40,12 +42,13 @@ public class Car {
 		this.category = category;
 	}
 
-	public Car(int id, int imagePath, int videoPath, String model, String description,
+	public Car(int id, int imagePath, int imagePathSecond, int videoPath, String model, String description,
 				  String yearProduced, String countryProduced, String countDoorsAndPlaces,
 				  String maxSpeed, String typeTransmission, String driveUnit, String fuelType,
 				  String fuelTankCapacity, String middlePrice, String category) {
 		this.id = id;
 		this.imagePath = imagePath;
+		this.imagePathSecond = imagePathSecond;
 		this.videoPath = videoPath;
 		this.model = model;
 		this.description = description;
@@ -59,6 +62,14 @@ public class Car {
 		this.fuelTankCapacity = fuelTankCapacity;
 		this.middlePrice = middlePrice;
 		this.category = category;
+	}
+
+	public int getImagePathSecond() {
+		return imagePathSecond;
+	}
+
+	public void setImagePathSecond(int imagePathSecond) {
+		this.imagePathSecond = imagePathSecond;
 	}
 
 	public int getId() {
