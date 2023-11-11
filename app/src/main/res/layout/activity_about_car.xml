@@ -79,9 +79,15 @@
 				android:id="@+id/relativeLayoutYear"
 				android:layout_width="wrap_content"
 				android:layout_height="wrap_content"
+				android:background="@drawable/background_orange_radius"
 				android:layout_marginTop="10dp"
 				app:layout_constraintStart_toStartOf="parent"
-				app:layout_constraintTop_toBottomOf="@+id/textViewDescription">
+				app:layout_constraintTop_toBottomOf="@+id/textViewDescription"
+				android:paddingTop="3dp"
+				android:paddingBottom="3dp"
+				android:paddingLeft="8dp"
+				android:paddingRight="8dp"
+				>
 
 				<ImageView
 					android:id="@+id/imageViewYear"
@@ -94,19 +100,24 @@
 
 				<TextView
 					android:id="@+id/textViewYear"
-					android:layout_marginTop="3dp"
+					android:layout_marginTop="2dp"
 					android:layout_width="wrap_content"
 					android:layout_height="wrap_content"
 					android:layout_alignParentTop="true"
 					android:layout_toEndOf="@+id/imageViewYear"
 					android:text="2000 рік"
-					android:textColor="#001D42" />
+					android:textColor="@color/white" />
 			</RelativeLayout>
 
 			<RelativeLayout
+				android:background="@drawable/background_orange_radius"
 				android:id="@+id/relativeLayoutCountry"
 				android:layout_width="wrap_content"
 				android:layout_height="wrap_content"
+				android:paddingTop="3dp"
+				android:paddingBottom="3dp"
+				android:paddingStart="8dp"
+				android:paddingEnd="8dp"
 				android:layout_marginTop="10dp"
 				app:layout_constraintStart_toStartOf="parent"
 				app:layout_constraintTop_toBottomOf="@+id/relativeLayoutYear">
@@ -122,13 +133,47 @@
 
 				<TextView
 					android:id="@+id/textViewCountry"
-					android:layout_marginTop="3dp"
+					android:layout_marginTop="2dp"
 					android:layout_width="wrap_content"
 					android:layout_height="wrap_content"
 					android:layout_alignParentTop="true"
 					android:layout_toEndOf="@+id/imageViewCountry"
-					android:text="Держава"
-					android:textColor="#001D42" />
+					android:text="Німечина"
+					android:textColor="@color/white" />
+			</RelativeLayout>
+
+			<RelativeLayout
+				android:background="@drawable/background_orange_radius"
+				android:id="@+id/relativeLayoutMaxSpeed"
+				android:layout_width="wrap_content"
+				android:layout_height="wrap_content"
+				android:paddingTop="3dp"
+				android:paddingBottom="3dp"
+				android:paddingLeft="8dp"
+				android:paddingRight="8dp"
+				android:layout_marginTop="10dp"
+				android:layout_marginStart="10dp"
+				app:layout_constraintStart_toEndOf="@+id/relativeLayoutYear"
+				app:layout_constraintTop_toBottomOf="@+id/textViewDescription">
+
+				<ImageView
+					android:id="@+id/imageViewMaxSpeed"
+					android:layout_width="24dp"
+					android:layout_height="24dp"
+					android:layout_alignParentStart="true"
+					android:layout_alignParentTop="true"
+					android:layout_marginEnd="5dp"
+					android:src="@drawable/max_speed_blue" />
+
+				<TextView
+					android:id="@+id/textViewMaxSpeed"
+					android:layout_marginTop="2dp"
+					android:layout_width="wrap_content"
+					android:layout_height="wrap_content"
+					android:layout_alignParentTop="true"
+					android:layout_toEndOf="@+id/imageViewMaxSpeed"
+					android:text="210 км/год"
+					android:textColor="@color/white" />
 			</RelativeLayout>
 
 		</androidx.constraintlayout.widget.ConstraintLayout>
