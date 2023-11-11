@@ -176,6 +176,130 @@
 					android:textColor="@color/white" />
 			</RelativeLayout>
 
+			<RelativeLayout
+				android:background="@drawable/background_orange_radius"
+				android:id="@+id/relativeLayoutTankCapacity"
+				android:layout_width="wrap_content"
+				android:layout_height="wrap_content"
+				android:paddingTop="3dp"
+				android:paddingBottom="3dp"
+				android:paddingLeft="8dp"
+				android:paddingRight="8dp"
+				android:layout_marginTop="10dp"
+				android:layout_marginStart="10dp"
+				app:layout_constraintStart_toEndOf="@+id/relativeLayoutCountry"
+				app:layout_constraintTop_toBottomOf="@+id/relativeLayoutMaxSpeed">
+
+				<ImageView
+					android:id="@+id/imageViewTankCapacity"
+					android:layout_width="24dp"
+					android:layout_height="24dp"
+					android:layout_alignParentStart="true"
+					android:layout_alignParentTop="true"
+					android:layout_marginEnd="5dp"
+					android:src="@drawable/icon_tank_capacity_blue" />
+
+				<TextView
+					android:id="@+id/textViewTankCapacity"
+					android:layout_marginTop="2dp"
+					android:layout_width="wrap_content"
+					android:layout_height="wrap_content"
+					android:layout_alignParentTop="true"
+					android:layout_toEndOf="@+id/imageViewTankCapacity"
+					android:text="88 літрів"
+					android:textColor="@color/white" />
+			</RelativeLayout>
+
+			<RelativeLayout
+				android:id="@+id/relativeLayoutAutomatic"
+				android:layout_marginTop="15dp"
+				android:layout_width="wrap_content"
+				android:layout_height="wrap_content"
+				app:layout_constraintTop_toBottomOf="@+id/relativeLayoutCountry"
+				app:layout_constraintStart_toStartOf="parent"
+				>
+
+				<ImageView
+					android:id="@+id/imageViewTransmission"
+					android:layout_width="16dp"
+					android:layout_height="16dp"
+					android:layout_alignParentStart="true"
+					android:layout_alignParentTop="true"
+					android:layout_marginTop="2dp"
+					android:layout_marginEnd="5dp"
+					android:src="@drawable/icon_transmission" />
+
+				<TextView
+					android:id="@+id/textViewTransmission"
+					android:layout_width="wrap_content"
+					android:layout_height="wrap_content"
+					android:layout_alignParentTop="true"
+					android:layout_toEndOf="@+id/imageViewTransmission"
+					android:text="Автоматична"
+					android:textColor="#001D42"
+					android:textStyle="bold" />
+			</RelativeLayout>
+
+			<RelativeLayout
+				android:id="@+id/relativeLayoutDoor"
+				android:layout_marginTop="7dp"
+				android:layout_width="wrap_content"
+				android:layout_height="wrap_content"
+				app:layout_constraintStart_toStartOf="parent"
+				app:layout_constraintTop_toBottomOf="@+id/relativeLayoutAutomatic"
+				>
+
+				<ImageView
+					android:id="@+id/imageViewDoor"
+					android:layout_width="16dp"
+					android:layout_height="16dp"
+					android:layout_alignParentStart="true"
+					android:layout_alignParentTop="true"
+					android:layout_marginTop="2dp"
+					android:layout_marginEnd="5dp"
+					android:src="@drawable/icon_door" />
+
+				<TextView
+					android:id="@+id/textViewDoor"
+					android:layout_width="wrap_content"
+					android:layout_height="wrap_content"
+					android:layout_alignParentTop="true"
+					android:layout_toEndOf="@+id/imageViewDoor"
+					android:text="2 дверей 4 місця"
+					android:textColor="#001D42"
+					android:textStyle="bold" />
+			</RelativeLayout>
+
+			<RelativeLayout
+				android:id="@+id/relativeLayoutDriveUnit"
+				android:layout_marginTop="7dp"
+				android:layout_width="wrap_content"
+				android:layout_height="wrap_content"
+				app:layout_constraintStart_toStartOf="parent"
+				app:layout_constraintTop_toBottomOf="@+id/relativeLayoutDoor"
+				>
+
+				<ImageView
+					android:id="@+id/imageViewDriveUnit"
+					android:layout_width="16dp"
+					android:layout_height="16dp"
+					android:layout_alignParentStart="true"
+					android:layout_alignParentTop="true"
+					android:layout_marginTop="2dp"
+					android:layout_marginEnd="5dp"
+					android:src="@drawable/icon_car_repair" />
+
+				<TextView
+					android:id="@+id/textViewDriveUnit"
+					android:layout_width="wrap_content"
+					android:layout_height="wrap_content"
+					android:layout_alignParentTop="true"
+					android:layout_toEndOf="@+id/imageViewDriveUnit"
+					android:text="Повний"
+					android:textColor="#001D42"
+					android:textStyle="bold" />
+			</RelativeLayout>
+
 		</androidx.constraintlayout.widget.ConstraintLayout>
 		
 
