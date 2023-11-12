@@ -1,10 +1,14 @@
 package com.example.mersbens;
 
+import androidx.annotation.NonNull;
+import androidx.appcompat.app.ActionBar;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.appcompat.widget.Toolbar;
+import androidx.core.app.NavUtils;
 
 import android.content.Intent;
 import android.os.Bundle;
+import android.view.MenuItem;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ImageButton;
@@ -27,6 +31,11 @@ public class VideoActivity extends AppCompatActivity {
 		toolbar.setTitle(model);
 		setSupportActionBar(toolbar);
 
+		ActionBar actionBar = this.getSupportActionBar();
+		if (actionBar != null) {
+			actionBar.setDisplayHomeAsUpEnabled(true);
+		}
+
 		VideoView videoView = findViewById(R.id.videoView);
 		videoView.setVideoPath("android.resource://" + getPackageName() + "/" + pathVideo);
 		videoView.seekTo(4);
@@ -48,4 +57,14 @@ public class VideoActivity extends AppCompatActivity {
 		TextView textViewTitle = findViewById(R.id.textViewModelTitle);
 		textViewTitle.setText(model);
 	}
+
+	@Override
+	public boolean onOptionsItemSelected(@NonNull MenuItem item) {
+		int id = item.getItemId();
+		if (id == android.R.id.home) {
+			NavUtils.navigateUpFromSameTask(this);
+		}
+		return super.onOptionsItemSelected(item);
+	}
+
 }

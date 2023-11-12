@@ -15,16 +15,32 @@
 		<activity
 			android:name=".VideoActivity"
 			android:exported="false"
-			android:screenOrientation="portrait"/>
+			android:screenOrientation="portrait"
+			android:parentActivityName=".AboutCarActivity"
+			>
+			<meta-data
+				android:name="android.support.PARENT_ACTIVITY"
+				android:value=".AboutCarActivity"
+				/>
+		</activity>
 		<activity
 			android:name=".AboutCarActivity"
 			android:exported="false"
-			android:screenOrientation="portrait" />
+			android:screenOrientation="portrait"
+			android:parentActivityName=".CategoryCarsActivity"
+			android:launchMode="singleTop"
+			>
+			<meta-data
+				android:name="android.support.PARENT_ACTIVITY"
+				android:value=".CategoryCarsActivity"
+				/>
+		</activity>
 		<activity
 			android:name=".CategoryCarsActivity"
 			android:exported="false"
 			android:screenOrientation="portrait"
 			android:parentActivityName=".MenuCarsActivity"
+			android:launchMode="singleTop"
 			>
 			<meta-data
 				android:name="android.support.PARENT_ACTIVITY"
