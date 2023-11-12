@@ -351,11 +351,40 @@
 			</RelativeLayout>
 
 			<RelativeLayout
+				android:id="@+id/relativeLayoutFuelType"
+				android:layout_width="wrap_content"
+				android:layout_height="wrap_content"
+				android:layout_marginTop="7dp"
+				app:layout_constraintStart_toStartOf="parent"
+				app:layout_constraintTop_toBottomOf="@+id/relativeLayoutEngine">
+
+				<ImageView
+					android:id="@+id/imageViewFuelType"
+					android:layout_width="20dp"
+					android:layout_height="20dp"
+					android:layout_alignParentStart="true"
+					android:layout_alignParentTop="true"
+					android:layout_marginEnd="5dp"
+					android:src="@drawable/icon_type_fuel" />
+
+				<TextView
+					android:id="@+id/textViewFuelType"
+					android:layout_width="wrap_content"
+					android:layout_height="wrap_content"
+					android:layout_alignParentTop="true"
+					android:layout_centerVertical="true"
+					android:layout_toEndOf="@+id/imageViewFuelType"
+					android:text="Тип палива"
+					android:textColor="#001D42"
+					android:textStyle="bold" />
+			</RelativeLayout>
+
+			<RelativeLayout
 				android:layout_width="match_parent"
 				android:layout_height="wrap_content"
 				android:layout_marginTop="15dp"
 				app:layout_constraintStart_toStartOf="parent"
-				app:layout_constraintTop_toBottomOf="@+id/relativeLayoutEngine">
+				app:layout_constraintTop_toBottomOf="@+id/relativeLayoutFuelType">
 
 				<RelativeLayout
 					android:id="@+id/relativeLayoutEngineDescr"
@@ -370,11 +399,11 @@
 						android:layout_width="match_parent"
 						android:layout_height="wrap_content"
 						android:layout_alignParentStart="true"
-						android:textColor="#040415"
 						android:layout_alignParentTop="true"
-						android:textStyle="bold"
+						android:text="Двигун"
+						android:textColor="#040415"
 						android:textSize="18sp"
-						android:text="Двигун" />
+						android:textStyle="bold" />
 
 					<TextView
 						android:id="@+id/textViewEngineDesc"
@@ -382,9 +411,9 @@
 						android:layout_height="wrap_content"
 						android:layout_below="@+id/textViewEngineTitle"
 						android:layout_marginTop="7dp"
-						android:textSize="16sp"
+						android:text="Опис двигуна"
 						android:textColor="#545971"
-						android:text="Опис двигуна" />
+						android:textSize="16sp" />
 
 				</RelativeLayout>
 
@@ -402,10 +431,10 @@
 						android:layout_height="wrap_content"
 						android:layout_alignParentStart="true"
 						android:layout_alignParentTop="true"
+						android:text="Підвіска "
 						android:textColor="#040415"
-						android:textStyle="bold"
 						android:textSize="18sp"
-						android:text="Підвіска " />
+						android:textStyle="bold" />
 
 					<TextView
 						android:id="@+id/textViewSuspensionDesc"
@@ -413,13 +442,135 @@
 						android:layout_height="wrap_content"
 						android:layout_below="@+id/textViewSuspensionTitle"
 						android:layout_marginTop="7dp"
-						android:textSize="16sp"
+						android:text="Опис підвіски"
 						android:textColor="#545971"
-						android:text="Опис підвіски" />
+						android:textSize="16sp" />
 
 				</RelativeLayout>
 
-				
+				<RelativeLayout
+					android:id="@+id/relativeLayoutTransmission"
+					android:layout_width="match_parent"
+					android:layout_height="wrap_content"
+					android:layout_below="@+id/relativeLayoutSuspension"
+					android:layout_alignParentStart="true"
+					android:layout_marginBottom="10dp">
+
+					<TextView
+						android:id="@+id/textViewTransmissionTitle"
+						android:layout_width="match_parent"
+						android:layout_height="wrap_content"
+						android:layout_alignParentStart="true"
+						android:layout_alignParentTop="true"
+						android:textColor="#040415"
+						android:textStyle="bold"
+						android:textSize="18sp"
+						android:text="Трансмісія  " />
+
+					<TextView
+						android:id="@+id/textViewTransmissionDesc"
+						android:layout_width="match_parent"
+						android:layout_height="wrap_content"
+						android:layout_below="@+id/textViewTransmissionTitle"
+						android:layout_marginTop="7dp"
+						android:textSize="16sp"
+						android:textColor="#545971"
+						android:text="Опис трансмісії" />
+
+				</RelativeLayout>
+
+				<RelativeLayout
+					android:id="@+id/relativeLayoutBreakSystem"
+					android:layout_width="match_parent"
+					android:layout_height="wrap_content"
+					android:layout_below="@+id/relativeLayoutTransmission"
+					android:layout_alignParentStart="true"
+					android:layout_marginBottom="10dp">
+
+					<TextView
+						android:id="@+id/textViewBreakSystemTitle"
+						android:layout_width="match_parent"
+						android:layout_height="wrap_content"
+						android:layout_alignParentStart="true"
+						android:layout_alignParentTop="true"
+						android:textColor="#040415"
+						android:textStyle="bold"
+						android:textSize="18sp"
+						android:text="Гальмівна система" />
+
+					<TextView
+						android:id="@+id/textViewBreakSystemDesc"
+						android:layout_width="match_parent"
+						android:layout_height="wrap_content"
+						android:layout_below="@+id/textViewBreakSystemTitle"
+						android:layout_marginTop="7dp"
+						android:textSize="16sp"
+						android:textColor="#545971"
+						android:text="Опис гальмової системи" />
+
+				</RelativeLayout>
+
+				<RelativeLayout
+					android:id="@+id/relativeLayoutWheelsTires"
+					android:layout_width="match_parent"
+					android:layout_height="wrap_content"
+					android:layout_below="@+id/relativeLayoutBreakSystem"
+					android:layout_alignParentStart="true"
+					android:layout_marginBottom="10dp">
+
+					<TextView
+						android:id="@+id/textViewWheelsTiresTitle"
+						android:layout_width="match_parent"
+						android:layout_height="wrap_content"
+						android:layout_alignParentStart="true"
+						android:layout_alignParentTop="true"
+						android:textColor="#040415"
+						android:textStyle="bold"
+						android:textSize="18sp"
+						android:text="Колеса та шини" />
+
+					<TextView
+						android:id="@+id/textViewWheelsTiresDesc"
+						android:layout_width="match_parent"
+						android:layout_height="wrap_content"
+						android:layout_below="@+id/textViewWheelsTiresTitle"
+						android:layout_marginTop="7dp"
+						android:textSize="16sp"
+						android:textColor="#545971"
+						android:text="Опис колес та шин" />
+
+				</RelativeLayout>
+
+				<RelativeLayout
+					android:id="@+id/relativeLayoutElectricalEquipment"
+					android:layout_width="match_parent"
+					android:layout_height="wrap_content"
+					android:layout_below="@+id/relativeLayoutWheelsTires"
+					android:layout_alignParentStart="true"
+					android:layout_marginBottom="10dp">
+
+					<TextView
+						android:id="@+id/textViewElectricalEquipmentTitle"
+						android:layout_width="match_parent"
+						android:layout_height="wrap_content"
+						android:layout_alignParentStart="true"
+						android:layout_alignParentTop="true"
+						android:textColor="#040415"
+						android:textStyle="bold"
+						android:textSize="18sp"
+						android:text="Електроустаткування" />
+
+					<TextView
+						android:id="@+id/textViewElectricalEquipmentDesc"
+						android:layout_width="match_parent"
+						android:layout_height="wrap_content"
+						android:layout_below="@+id/textViewElectricalEquipmentTitle"
+						android:layout_marginTop="7dp"
+						android:textSize="16sp"
+						android:textColor="#545971"
+						android:text="Опис електроустаткування" />
+
+				</RelativeLayout>
 
 			</RelativeLayout>
 
