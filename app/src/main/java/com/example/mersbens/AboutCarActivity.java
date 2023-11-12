@@ -9,6 +9,8 @@ import androidx.core.app.NavUtils;
 import android.content.Intent;
 import android.os.Bundle;
 import android.util.Log;
+import android.view.Menu;
+import android.view.MenuInflater;
 import android.view.MenuItem;
 import android.view.View;
 import android.widget.ImageButton;
@@ -110,11 +112,25 @@ public class AboutCarActivity extends AppCompatActivity {
 		}
 	}
 
+	// bakc home
+	@Override
+	public boolean onCreateOptionsMenu(Menu menu) {
+		MenuInflater menuInflater = getMenuInflater();
+		menuInflater.inflate(R.menu.menu, menu);
+		return true;
+	}
+	// ====================================================
+
 	@Override
 	public boolean onOptionsItemSelected(@NonNull MenuItem item) {
 		int id = item.getItemId();
 		if (id == android.R.id.home) {
 			NavUtils.navigateUpFromSameTask(this);
+		} else if (id == R.id.action_home) {
+			Intent intent = new Intent(AboutCarActivity.this, MenuCarsActivity.class);
+			startActivity(intent);
+			finish();
+			return true;
 		}
 		return super.onOptionsItemSelected(item);
 	}

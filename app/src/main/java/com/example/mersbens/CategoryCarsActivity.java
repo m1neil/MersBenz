@@ -11,6 +11,8 @@ import androidx.recyclerview.widget.RecyclerView;
 import android.content.Intent;
 import android.os.Bundle;
 import android.util.Log;
+import android.view.Menu;
+import android.view.MenuInflater;
 import android.view.MenuItem;
 
 import java.util.List;
@@ -49,6 +51,8 @@ public class CategoryCarsActivity extends AppCompatActivity {
 		recyclerView.setAdapter(adapter);
 		recyclerView.setLayoutManager(layoutManager);
 	}
+
+
 
 	@Override
 	public boolean onOptionsItemSelected(@NonNull MenuItem item) {
