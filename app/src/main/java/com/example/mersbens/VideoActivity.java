@@ -8,6 +8,7 @@ import androidx.core.app.NavUtils;
 
 import android.content.Intent;
 import android.os.Bundle;
+import android.os.Handler;
 import android.view.Menu;
 import android.view.MenuInflater;
 import android.view.MenuItem;
@@ -18,8 +19,14 @@ import android.widget.MediaController;
 import android.widget.TextView;
 import android.widget.VideoView;
 
-public class VideoActivity extends AppCompatActivity {
+import java.util.Timer;
+import java.util.TimerTask;
 
+public class VideoActivity extends AppCompatActivity {
+	VideoView videoView;
+	ImageButton imageButton;
+	private Handler handler;
+	private Runnable runnable;
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
@@ -38,7 +45,7 @@ public class VideoActivity extends AppCompatActivity {
 			actionBar.setDisplayHomeAsUpEnabled(true);
 		}
 
-		VideoView videoView = findViewById(R.id.videoView);
+		videoView = findViewById(R.id.videoView);
 		videoView.setVideoPath("android.resource://" + getPackageName() + "/" + pathVideo);
 		videoView.seekTo(4);
 
@@ -47,14 +54,46 @@ public class VideoActivity extends AppCompatActivity {
 
 		videoView.setMediaController(mediaController);
 
-		ImageButton imageButton = findViewById(R.id.imageButtonPlay);
+		handler = new Handler();
+		runnable = new Runnable() {
+			@Override
+			public void run() {
+				if (!videoView.isPlaying()) {
+					imageButton.setVisibility(View.VISIBLE);
+				} else {
+					imageButton.setVisibility(View.GONE);
+				}
+				handler.postDelayed(this, 1000);
+			}
+		};
+
+		imageButton = findViewById(R.id.imageButtonPlay);
 		imageButton.setOnClickListener(new View.OnClickListener() {
 			@Override
 			public void onClick(View v) {
 				videoView.start();
 				imageButton.setVisibility(View.GONE);
+				handler.postDelayed(runnable, 1000);
 			}
 		});
+		/* imageButton.setOnClickListener(new View.OnClickListener() {
+			@Override
+			public void onClick(View v) {
+				videoView.start();
+				imageButton.setVisibility(View.GONE);
+				new Timer().scheduleAtFixedRate(new TimerTask() {
+					@Override
+					public void run() {
+						if (!videoView.isPlaying()) {
+							imageButton.setVisibility(View.VISIBLE);
+						}
+					}
+				},0, 1000);
+			}
+		});
+
+		*/
+
 
 		TextView textViewTitle = findViewById(R.id.textViewModelTitle);
 		textViewTitle.setText(model);
