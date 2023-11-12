@@ -76,25 +76,7 @@ public class VideoActivity extends AppCompatActivity {
 				handler.postDelayed(runnable, 1000);
 			}
 		});
-		/* imageButton.setOnClickListener(new View.OnClickListener() {
-			@Override
-			public void onClick(View v) {
-				videoView.start();
-				imageButton.setVisibility(View.GONE);
-				new Timer().scheduleAtFixedRate(new TimerTask() {
-					@Override
-					public void run() {
-						if (!videoView.isPlaying()) {
-							imageButton.setVisibility(View.VISIBLE);
-						}
-					}
-				},0, 1000);
-			}
-		});
-
-		*/
-
-
+		
 		TextView textViewTitle = findViewById(R.id.textViewModelTitle);
 		textViewTitle.setText(model);
 	}
