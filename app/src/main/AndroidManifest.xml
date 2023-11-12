@@ -13,46 +13,42 @@
 		android:theme="@style/Theme.MersBens"
 		tools:targetApi="31">
 		<activity
+			android:name=".RegistrationActivity"
+			android:exported="false" />
+		<activity
 			android:name=".VideoActivity"
 			android:exported="false"
-			android:screenOrientation="portrait"
 			android:parentActivityName=".AboutCarActivity"
-			>
+			android:screenOrientation="portrait">
 			<meta-data
 				android:name="android.support.PARENT_ACTIVITY"
-				android:value=".AboutCarActivity"
-				/>
+				android:value=".AboutCarActivity" />
 		</activity>
 		<activity
 			android:name=".AboutCarActivity"
 			android:exported="false"
-			android:screenOrientation="portrait"
-			android:parentActivityName=".CategoryCarsActivity"
 			android:launchMode="singleTop"
-			>
+			android:parentActivityName=".CategoryCarsActivity"
+			android:screenOrientation="portrait">
 			<meta-data
 				android:name="android.support.PARENT_ACTIVITY"
-				android:value=".CategoryCarsActivity"
-				/>
+				android:value=".CategoryCarsActivity" />
 		</activity>
 		<activity
 			android:name=".CategoryCarsActivity"
 			android:exported="false"
-			android:screenOrientation="portrait"
-			android:parentActivityName=".MenuCarsActivity"
 			android:launchMode="singleTop"
-			>
+			android:parentActivityName=".MenuCarsActivity"
+			android:screenOrientation="portrait">
 			<meta-data
 				android:name="android.support.PARENT_ACTIVITY"
-				android:value=".MenuCarsActivity"
-				/>
+				android:value=".MenuCarsActivity" />
 		</activity>
 		<activity
 			android:name=".MenuCarsActivity"
 			android:exported="false"
-			android:screenOrientation="portrait"
 			android:launchMode="singleTop"
-			/>
+			android:screenOrientation="portrait" />
 		<activity
 			android:name=".MainActivity"
 			android:exported="true"

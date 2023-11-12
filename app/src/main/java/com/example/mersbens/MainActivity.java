@@ -35,7 +35,8 @@ public class MainActivity extends AppCompatActivity {
 
 			@Override
 			public void onFinish() {
-				Intent intent = new Intent(MainActivity.this, MenuCarsActivity.class);
+//				Intent intent = new Intent(MainActivity.this, MenuCarsActivity.class);
+				Intent intent = new Intent(MainActivity.this, RegistrationActivity.class);
 				intent.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK | Intent.FLAG_ACTIVITY_CLEAR_TOP);
 				startActivity(intent);
 				finish();
