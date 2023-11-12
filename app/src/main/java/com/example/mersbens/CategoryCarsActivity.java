@@ -1,13 +1,17 @@
 package com.example.mersbens;
 
+import androidx.annotation.NonNull;
+import androidx.appcompat.app.ActionBar;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.appcompat.widget.Toolbar;
+import androidx.core.app.NavUtils;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
 import android.content.Intent;
 import android.os.Bundle;
 import android.util.Log;
+import android.view.MenuItem;
 
 import java.util.List;
 
@@ -30,6 +34,11 @@ public class CategoryCarsActivity extends AppCompatActivity {
 		toolbar.setTitle(intent.getStringExtra("title"));
 		setSupportActionBar(toolbar);
 
+		ActionBar actionBar = this.getSupportActionBar();
+		if (actionBar != null) {
+			actionBar.setDisplayHomeAsUpEnabled(true);
+		}
+
 		DatabaseHelper db = new DatabaseHelper(CategoryCarsActivity.this);
 		List<Car> list = db.getCarByCategory(intent.getStringExtra("category"));
 
@@ -39,5 +48,14 @@ public class CategoryCarsActivity extends AppCompatActivity {
 		layoutManager = new LinearLayoutManager(CategoryCarsActivity.this);
 		recyclerView.setAdapter(adapter);
 		recyclerView.setLayoutManager(layoutManager);
+	}
+
+	@Override
+	public boolean onOptionsItemSelected(@NonNull MenuItem item) {
+		int id = item.getItemId();
+		if (id == android.R.id.home) {
+			NavUtils.navigateUpFromSameTask(this);
+		}
+		return super.onOptionsItemSelected(item);
 	}
 }
