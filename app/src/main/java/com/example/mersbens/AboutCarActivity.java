@@ -33,7 +33,12 @@ public class AboutCarActivity extends AppCompatActivity {
 		textViewDriveUnit,
 		textViewEngineName,
 		textViewEngineDesc,
-		textViewSuspensionDesc;
+		textViewSuspensionDesc,
+		textViewTransmissionDesc,
+		textViewBreakSystemDesc,
+		textViewWheelsTiresDesc,
+		textViewElectricalEquipmentDesc,
+		textViewFuelType;
 
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
@@ -57,6 +62,11 @@ public class AboutCarActivity extends AppCompatActivity {
 		textViewEngineName = findViewById(R.id.textViewEngine);
 		textViewEngineDesc = findViewById(R.id.textViewEngineDesc);
 		textViewSuspensionDesc = findViewById(R.id.textViewSuspensionDesc);
+		textViewTransmissionDesc = findViewById(R.id.textViewTransmissionDesc);
+		textViewBreakSystemDesc = findViewById(R.id.textViewBreakSystemDesc);
+		textViewWheelsTiresDesc = findViewById(R.id.textViewWheelsTiresDesc);
+		textViewElectricalEquipmentDesc = findViewById(R.id.textViewElectricalEquipmentDesc);
+		textViewFuelType = findViewById(R.id.textViewFuelType);
 
 		Intent intent = getIntent();
 		int id = intent.getIntExtra("idCar", 1);
@@ -77,6 +87,11 @@ public class AboutCarActivity extends AppCompatActivity {
 		textViewEngineName.setText(car.getEngine());
 		textViewEngineDesc.setText(car.getEngineDescr());
 		textViewSuspensionDesc.setText(car.getSuspensionDescr());
+		textViewTransmissionDesc.setText(car.getTransmissionDescr());
+		textViewBreakSystemDesc.setText(car.getBrakeSystemDescr());
+		textViewWheelsTiresDesc.setText(car.getWheelsTiresDescr());
+		textViewElectricalEquipmentDesc.setText(car.getElectricalEquipment());
+		textViewFuelType.setText(car.getFuelType());
 
 		imageViewCar.setOnClickListener(new View.OnClickListener() {
 			@Override
