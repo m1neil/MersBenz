@@ -220,6 +220,30 @@
 				android:layout_marginEnd="15dp"
 				/>
 
+			<LinearLayout
+				android:layout_width="wrap_content"
+				android:layout_height="wrap_content"
+				android:layout_marginTop="20dp"
+				android:layout_marginEnd="15dp"
+				android:layout_marginStart="15dp"
+				android:orientation="horizontal"
+				app:layout_constraintEnd_toEndOf="parent"
+				app:layout_constraintStart_toStartOf="parent"
+				android:onClick="goToLogin"
+				app:layout_constraintTop_toBottomOf="@+id/buttonRegistration">
+
+				<TextView
+					android:layout_width="wrap_content"
+					android:layout_height="wrap_content"
+					android:paddingEnd="45dp"
+					android:paddingStart="45dp"
+					android:text="Login"
+					android:textAlignment="center"
+					android:textColor="#FF5C00"
+					android:textSize="16sp" />
+
+			</LinearLayout>
+
 		</androidx.constraintlayout.widget.ConstraintLayout>
 	</ScrollView>
 </androidx.constraintlayout.widget.ConstraintLayout>

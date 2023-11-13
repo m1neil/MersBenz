@@ -179,6 +179,37 @@
 				android:layout_marginEnd="15dp"
 				/>
 
+			<LinearLayout
+				android:layout_width="wrap_content"
+				android:layout_height="wrap_content"
+				android:layout_marginTop="45dp"
+				android:orientation="horizontal"
+				app:layout_constraintEnd_toEndOf="parent"
+				app:layout_constraintStart_toStartOf="parent"
+				android:onClick="goToRegistration"
+				app:layout_constraintTop_toBottomOf="@+id/buttonLogin">
+
+				<TextView
+					android:layout_width="wrap_content"
+					android:layout_height="wrap_content"
+					android:text="Don’t have an account?"
+					android:textAlignment="center"
+					android:textColor="#A8AFB9"
+					android:layout_marginEnd="8dp"
+					android:textSize="16sp" />
+
+				<TextView
+					android:layout_width="wrap_content"
+					android:layout_height="wrap_content"
+					android:text="Sign Up"
+					android:textAlignment="center"
+					android:textColor="#FF5C00"
+					android:textSize="16sp" />
+
+			</LinearLayout>
+
+
+
 		</androidx.constraintlayout.widget.ConstraintLayout>
 	</ScrollView>
 </androidx.constraintlayout.widget.ConstraintLayout>

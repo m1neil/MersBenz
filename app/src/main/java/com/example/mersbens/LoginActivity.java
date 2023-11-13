@@ -57,4 +57,9 @@ public class LoginActivity extends AppCompatActivity {
 			Toast.makeText(this, "Такий обліковий запис не знайденно", Toast.LENGTH_SHORT).show();
 		}
 	}
+
+	public void goToRegistration(View view) {
+		Intent intent = new Intent(LoginActivity.this, RegistrationActivity.class);
+		startActivity(intent);
+	}
 }

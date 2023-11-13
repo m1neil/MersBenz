@@ -46,4 +46,9 @@ public class RegistrationActivity extends AppCompatActivity {
 			Toast.makeText(this, "Такий обліковий запис вже існує", Toast.LENGTH_SHORT).show();
 		}
 	}
+
+	public void goToLogin(View view) {
+		Intent intent = new Intent(RegistrationActivity.this, LoginActivity.class);
+		startActivity(intent);
+	}
 }
