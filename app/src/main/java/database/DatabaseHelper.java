@@ -124,6 +124,28 @@ public class DatabaseHelper extends SQLiteOpenHelper {
 		return cars;
 	}
 
+	public int getCarByName(String name) {
+		SQLiteDatabase db = this.getReadableDatabase();
+		Cursor cursor = db.query(Utils.TABLE_NAME_CARS,
+			new String[]{Utils.KEY_ID},
+			Utils.KEY_MODEL + "=?",
+			new String[]{name},
+			null, null, null, null);
+
+		int id = 0;
+
+		if (cursor.moveToFirst()) {
+			try {
+				int idIndex = cursor.getColumnIndex(Utils.KEY_ID);
+				id = cursor.getInt(idIndex);
+			} finally {
+				cursor.close();
+			}
+		}
+
+		return id;
+	}
+
 	public Car getCarById(int id) {
 		SQLiteDatabase db = this.getReadableDatabase();
 

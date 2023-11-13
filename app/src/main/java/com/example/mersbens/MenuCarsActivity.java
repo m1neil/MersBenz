@@ -21,6 +21,7 @@ public class MenuCarsActivity extends AppCompatActivity {
 
 	RelativeLayout recyclerViewSportCars, recyclerViewSuvsCars, recyclerViewElectricCars;
 	String category = "", title;
+
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
@@ -30,13 +31,16 @@ public class MenuCarsActivity extends AppCompatActivity {
 
 		DatabaseHelper db = new DatabaseHelper(getApplicationContext());
 		Log.d("sizeDB", "sizeDB " + db.getCountCars());
-		if (db.getCountCars() == 0) {
-			MercedesBenz mb = new MercedesBenz();
-			ArrayList<Car> cars = mb.getArrayList();
-			for (Car car: cars) {
+
+		MercedesBenz mb = new MercedesBenz();
+		ArrayList<Car> cars = mb.getArrayList();
+		for (Car car : cars) {
+			Log.d("findInDb", "" + db.getCarByName(car.getModel()));
+			if (db.getCarByName(car.getModel()) == 0) {
 				db.addCar(car);
 			}
 		}
+
 
 		recyclerViewSportCars = findViewById(R.id.relativeLayoutSportCar);
 		recyclerViewSuvsCars = findViewById(R.id.relativeLayoutSuvsCars);
