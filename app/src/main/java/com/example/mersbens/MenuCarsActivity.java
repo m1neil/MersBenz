@@ -35,8 +35,8 @@ public class MenuCarsActivity extends AppCompatActivity {
 		MercedesBenz mb = new MercedesBenz();
 		ArrayList<Car> cars = mb.getArrayList();
 		for (Car car : cars) {
-			Log.d("findInDb", "" + db.getCarByName(car.getModel()));
-			if (db.getCarByName(car.getModel()) == 0) {
+			int id = db.getCarByName(car.getModel());
+			if (id == 0) {
 				db.addCar(car);
 			}
 		}

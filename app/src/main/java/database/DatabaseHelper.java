@@ -9,6 +9,8 @@ import android.database.sqlite.SQLiteOpenHelper;
 import java.util.ArrayList;
 import java.util.List;
 
+import User.User;
+
 public class DatabaseHelper extends SQLiteOpenHelper {
 	public DatabaseHelper(Context context) {
 		super(context, Utils.DATABASE_NAME, null, Utils.DATABASE_VERSION);
@@ -42,7 +44,15 @@ public class DatabaseHelper extends SQLiteOpenHelper {
 			+ Utils.KEY_ELECTRICAL_EQUIPMENT + " TEXT" +
 			")";
 
+		String createTableUsers = "CREATE TABLE " + UtilsUsers.TABLE_NAME + "("
+			+ UtilsUsers.KEY_ID + " INTEGER PRIMARY KEY,"
+			+ UtilsUsers.KEY_NAME + " TEXT,"
+			+ UtilsUsers.KEY_EMAIL + " TEXT,"
+			+ UtilsUsers.KEY_PASSWORD + " TEXT,"
+			+ UtilsUsers.KEY_LIKE_CARS + " TEXT" + ")";
+
 		db.execSQL(createTable);
+		db.execSQL(createTableUsers);
 	}
 
 	@Override
@@ -228,6 +238,40 @@ public class DatabaseHelper extends SQLiteOpenHelper {
 			}
 		}
 		return count;
+	}
+
+	public void addUser(User user) {
+		SQLiteDatabase db = this.getWritableDatabase();
+
+		ContentValues contentValues = new ContentValues();
+		contentValues.put(UtilsUsers.KEY_NAME, user.getName());
+		contentValues.put(UtilsUsers.KEY_EMAIL, user.getEmail());
+		contentValues.put(UtilsUsers.KEY_PASSWORD, user.getPassword());
+
+		db.insert(UtilsUsers.TABLE_NAME, null, contentValues);
+		db.close();
+	}
+
+	public int getUserByEmail(String email) {
+		SQLiteDatabase db = this.getReadableDatabase();
+		Cursor cursor = db.query(UtilsUsers.TABLE_NAME,
+			new String[]{Utils.KEY_ID},
+			UtilsUsers.KEY_EMAIL + "=?",
+			new String[]{email},
+			null, null, null, null);
+
+		int id = 0;
+
+		if (cursor.moveToFirst()) {
+			try {
+				int idIndex = cursor.getColumnIndex(UtilsUsers.KEY_ID);
+				id = cursor.getInt(idIndex);
+			} finally {
+				cursor.close();
+			}
+		}
+
+		return id;
 	}
 
 }
