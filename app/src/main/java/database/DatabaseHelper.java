@@ -274,4 +274,35 @@ public class DatabaseHelper extends SQLiteOpenHelper {
 		return id;
 	}
 
+	public User getUserByByEmailFullInfo(int id) {
+		SQLiteDatabase db = this.getReadableDatabase();
+
+		Cursor cursor = db.query(UtilsUsers.TABLE_NAME, new String[]{UtilsUsers.KEY_ID, UtilsUsers.KEY_NAME,
+				UtilsUsers.KEY_EMAIL, UtilsUsers.KEY_PASSWORD,
+			UtilsUsers.KEY_LIKE_CARS}, UtilsUsers.KEY_ID + "=?", new String[]{String.valueOf(id)},
+			null, null,
+			null, null);
+		User user = new User();
+		if (cursor != null) {
+			try {
+				cursor.moveToFirst();
+				int idUser = cursor.getColumnIndex(UtilsUsers.KEY_ID);
+				int idName = cursor.getColumnIndex(UtilsUsers.KEY_NAME);
+				int idEmail = cursor.getColumnIndex(UtilsUsers.KEY_EMAIL);
+				int idPass = cursor.getColumnIndex(UtilsUsers.KEY_PASSWORD);
+				int idListCarsId = cursor.getColumnIndex(UtilsUsers.KEY_LIKE_CARS);
+
+				user.setId(cursor.getInt(idUser));
+				user.setName(cursor.getString(idName));
+				user.setEmail(cursor.getString(idEmail));
+				user.setPassword(cursor.getString(idPass));
+				user.setLikeCars(cursor.getString(idListCarsId));
+
+			} finally {
+				cursor.close();
+			}
+		}
+		return user;
+	}
+
 }

@@ -3,6 +3,7 @@ package com.example.mersbens;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Context;
+import android.content.Intent;
 import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.view.View;
@@ -39,7 +40,8 @@ public class RegistrationActivity extends AppCompatActivity {
 			name.setText("");
 			email.setText("");
 			password.setText("");
-
+			Intent intent = new Intent(RegistrationActivity.this, LoginActivity.class);
+			startActivity(intent);
 		} else {
 			Toast.makeText(this, "Такий обліковий запис вже існує", Toast.LENGTH_SHORT).show();
 		}
