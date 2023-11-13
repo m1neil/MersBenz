@@ -42,6 +42,7 @@ public class RegistrationActivity extends AppCompatActivity {
 			password.setText("");
 			Intent intent = new Intent(RegistrationActivity.this, LoginActivity.class);
 			startActivity(intent);
+			finish();
 		} else {
 			Toast.makeText(this, "Такий обліковий запис вже існує", Toast.LENGTH_SHORT).show();
 		}
@@ -50,5 +51,6 @@ public class RegistrationActivity extends AppCompatActivity {
 	public void goToLogin(View view) {
 		Intent intent = new Intent(RegistrationActivity.this, LoginActivity.class);
 		startActivity(intent);
+		finish();
 	}
 }

@@ -2,7 +2,9 @@ package com.example.mersbens;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.content.Context;
 import android.content.Intent;
+import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.os.CountDownTimer;
 import android.widget.ImageView;
@@ -35,9 +37,14 @@ public class MainActivity extends AppCompatActivity {
 
 			@Override
 			public void onFinish() {
-//				Intent intent = new Intent(MainActivity.this, MenuCarsActivity.class);
-//				Intent intent = new Intent(MainActivity.this, RegistrationActivity.class);
-				Intent intent = new Intent(MainActivity.this, LoginActivity.class);
+				SharedPreferences sharedPreferences = getSharedPreferences("user", Context.MODE_PRIVATE);
+				Intent intent;
+				if (sharedPreferences.getInt("idUser", 0) != 0) {
+					intent = new Intent(MainActivity.this, MenuCarsActivity.class);
+				} else {
+					intent = new Intent(MainActivity.this, LoginActivity.class);
+				}
+
 				intent.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK | Intent.FLAG_ACTIVITY_CLEAR_TOP);
 				startActivity(intent);
 				finish();
