@@ -247,8 +247,7 @@ public class DatabaseHelper extends SQLiteOpenHelper {
 		contentValues.put(UtilsUsers.KEY_NAME, user.getName());
 		contentValues.put(UtilsUsers.KEY_EMAIL, user.getEmail());
 		contentValues.put(UtilsUsers.KEY_PASSWORD, user.getPassword());
-//		! You need to remove it!!!!
-		contentValues.put(UtilsUsers.KEY_LIKE_CARS, user.getLikeCars());
+		contentValues.put(UtilsUsers.KEY_LIKE_CARS, "");
 
 		db.insert(UtilsUsers.TABLE_NAME, null, contentValues);
 		db.close();

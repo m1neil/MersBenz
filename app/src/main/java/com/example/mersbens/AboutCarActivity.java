@@ -135,14 +135,13 @@ public class AboutCarActivity extends AppCompatActivity {
 		String likeCars = db.getLikeCars(idUser);
 		List nl = Arrays.asList(likeCars.split(","));
 
-		if (nl.contains(String.valueOf(id))) {
+		if (nl.contains(String.valueOf(id)) && nl.size() > 0) {
 			MenuItem item = menu.findItem(R.id.action_favourite);
 			item.setIcon(R.drawable.icon_favorite);
 		}
 
 		return true;
 	}
-	// ====================================================
 
 	@Override
 	public boolean onOptionsItemSelected(MenuItem item) {
