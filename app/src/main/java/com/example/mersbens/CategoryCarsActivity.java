@@ -55,7 +55,7 @@ public class CategoryCarsActivity extends AppCompatActivity {
 
 
 	@Override
-	public boolean onOptionsItemSelected(@NonNull MenuItem item) {
+	public boolean onOptionsItemSelected(MenuItem item) {
 		int id = item.getItemId();
 		if (id == android.R.id.home) {
 			NavUtils.navigateUpFromSameTask(this);
