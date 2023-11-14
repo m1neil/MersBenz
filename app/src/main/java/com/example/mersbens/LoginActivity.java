@@ -19,6 +19,14 @@ public class LoginActivity extends AppCompatActivity {
 	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
 		setContentView(R.layout.activity_login);
+
+		DatabaseHelper databaseHelper = new DatabaseHelper(getApplicationContext());
+		int id = databaseHelper.getUserByEmail("admin@gmail.com");
+		if (id == 0) {
+			User admin = new User("admin", "admin@gmail.com", "admin");
+			admin.setLikeCars("1,2,3");
+			databaseHelper.addUser(admin);
+		}
 	}
 
 	public void login(View view) {

@@ -100,6 +100,9 @@ public class VideoActivity extends AppCompatActivity {
 	public boolean onCreateOptionsMenu(Menu menu) {
 		MenuInflater menuInflater = getMenuInflater();
 		menuInflater.inflate(R.menu.menu, menu);
+
+		MenuItem item = menu.findItem(R.id.action_favourite);
+		item.setVisible(false);
 		return true;
 	}
 	// ====================================================

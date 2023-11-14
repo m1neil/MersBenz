@@ -247,6 +247,8 @@ public class DatabaseHelper extends SQLiteOpenHelper {
 		contentValues.put(UtilsUsers.KEY_NAME, user.getName());
 		contentValues.put(UtilsUsers.KEY_EMAIL, user.getEmail());
 		contentValues.put(UtilsUsers.KEY_PASSWORD, user.getPassword());
+//		! You need to remove it!!!!
+		contentValues.put(UtilsUsers.KEY_LIKE_CARS, user.getLikeCars());
 
 		db.insert(UtilsUsers.TABLE_NAME, null, contentValues);
 		db.close();
@@ -273,6 +275,39 @@ public class DatabaseHelper extends SQLiteOpenHelper {
 
 		return id;
 	}
+
+	public String getLikeCars(int id) {
+		SQLiteDatabase db = this.getReadableDatabase();
+		Cursor cursor = db.query(UtilsUsers.TABLE_NAME,
+			new String[]{UtilsUsers.KEY_LIKE_CARS},
+			UtilsUsers.KEY_ID + "=?",
+			new String[]{String.valueOf(id)},
+			null, null, null, null);
+
+		String likeCars = "";
+
+		if (cursor.moveToFirst()) {
+			try {
+				int listCarsIndex = cursor.getColumnIndex(UtilsUsers.KEY_LIKE_CARS);
+				likeCars = cursor.getString(listCarsIndex);
+			} finally {
+				cursor.close();
+			}
+		}
+
+		return likeCars;
+	}
+
+	public int updateUser(User user) {
+		SQLiteDatabase db = this.getWritableDatabase();
+
+		ContentValues contentValues = new ContentValues();
+		contentValues.put(UtilsUsers.KEY_LIKE_CARS, user.getLikeCars());
+
+		return db.update(UtilsUsers.TABLE_NAME, contentValues, UtilsUsers.KEY_ID + "=?",
+			new String[] {String.valueOf(user.getId())});
+	}
+
 
 	public User getUserByByEmailFullInfo(int id) {
 		SQLiteDatabase db = this.getReadableDatabase();
