@@ -19,7 +19,8 @@ import database.MercedesBenz;
 
 public class MenuCarsActivity extends AppCompatActivity {
 
-	RelativeLayout recyclerViewSportCars, recyclerViewSuvsCars, recyclerViewElectricCars;
+	RelativeLayout recyclerViewSportCars, recyclerViewSuvsCars, recyclerViewElectricCars,
+		recyclerViewFavouriteCats;
 	String category = "", title;
 
 	@Override
@@ -45,6 +46,7 @@ public class MenuCarsActivity extends AppCompatActivity {
 		recyclerViewSportCars = findViewById(R.id.relativeLayoutSportCar);
 		recyclerViewSuvsCars = findViewById(R.id.relativeLayoutSuvsCars);
 		recyclerViewElectricCars = findViewById(R.id.relativeLayoutElectricCars);
+		recyclerViewFavouriteCats = findViewById(R.id.relativeLayoutFavoriteCars);
 
 		recyclerViewSportCars.setOnClickListener(new View.OnClickListener() {
 			@Override
@@ -70,6 +72,14 @@ public class MenuCarsActivity extends AppCompatActivity {
 			public void onClick(View v) {
 				Toast.makeText(MenuCarsActivity.this, "У розробці", Toast.LENGTH_LONG).show();
 				category = "electric";
+			}
+		});
+
+		recyclerViewFavouriteCats.setOnClickListener(new View.OnClickListener() {
+			@Override
+			public void onClick(View v) {
+				Intent intent = new Intent(getApplicationContext(), FavouriteCarsActivity.class);
+				startActivity(intent);
 			}
 		});
 

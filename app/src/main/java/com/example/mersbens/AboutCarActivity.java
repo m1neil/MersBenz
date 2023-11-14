@@ -157,7 +157,10 @@ public class AboutCarActivity extends AppCompatActivity {
 			SharedPreferences sharedPreferences = this.getSharedPreferences("user", Context.MODE_PRIVATE);
 			int idUser = sharedPreferences.getInt("idUser", 0);
 			User currentUser = db.getUserByByEmailFullInfo(idUser);
-			List<String> nl = new ArrayList<>(Arrays.asList(currentUser.getLikeCars().split(",")));
+			List<String> nl = new ArrayList<>();
+			if (currentUser.getLikeCars().length() > 0) {
+				nl = new ArrayList<>(Arrays.asList(currentUser.getLikeCars().split(",")));
+			}
 			if (nl.contains(String.valueOf(id))) {
 				nl.remove(String.valueOf(id));
 				String listCars = String.join(",", nl);

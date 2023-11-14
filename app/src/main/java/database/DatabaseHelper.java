@@ -159,7 +159,7 @@ public class DatabaseHelper extends SQLiteOpenHelper {
 	public Car getCarById(int id) {
 		SQLiteDatabase db = this.getReadableDatabase();
 
-		Cursor cursor = db.query(Utils.TABLE_NAME_CARS, new String[]{Utils.KEY_ID, Utils.KEY_MODEL,
+		Cursor cursor = db.query(Utils.TABLE_NAME_CARS, new String[]{Utils.KEY_ID, Utils.KEY_MODEL, Utils.KEY_IMAGE_PATH,
 				Utils.KEY_IMAGE_PATH_SECOND, Utils.KEY_VIDEO_PATH, Utils.KEY_DESCRIPTION, Utils.KEY_YEAR_PRODUCED,
 				Utils.KEY_COUNTRY_PRODUCED, Utils.KEY_DOORS_AND_PLACES, Utils.KEY_MAX_SPEED, Utils.KEY_TYPE_TRANSMISSION,
 				Utils.KEY_DRIVE_UNIT, Utils.KEY_FUEL_TYPE, Utils.KEY_FUEL_TANK_CAPACITY, Utils.KEY_MIDDLE_PRICE,
@@ -174,6 +174,7 @@ public class DatabaseHelper extends SQLiteOpenHelper {
 				cursor.moveToFirst();
 				int idCar = cursor.getColumnIndex(Utils.KEY_ID);
 				int idModel = cursor.getColumnIndex(Utils.KEY_MODEL);
+				int idImagePathFirst = cursor.getColumnIndex(Utils.KEY_IMAGE_PATH);
 				int idImagePath = cursor.getColumnIndex(Utils.KEY_IMAGE_PATH_SECOND);
 				int idVideoPath = cursor.getColumnIndex(Utils.KEY_VIDEO_PATH);
 				int idDescription = cursor.getColumnIndex(Utils.KEY_DESCRIPTION);
@@ -196,6 +197,7 @@ public class DatabaseHelper extends SQLiteOpenHelper {
 
 				car.setId(cursor.getInt(idCar));
 				car.setModel(cursor.getString(idModel));
+				car.setImagePath(cursor.getInt(idImagePathFirst));
 				car.setImagePathSecond(cursor.getInt(idImagePath));
 				car.setVideoPath(cursor.getInt(idVideoPath));
 				car.setDescription(cursor.getString(idDescription));

@@ -13,6 +13,9 @@
 		android:theme="@style/Theme.MersBens"
 		tools:targetApi="31">
 		<activity
+			android:name=".FavouriteCarsActivity"
+			android:exported="false" />
+		<activity
 			android:name=".LoginActivity"
 			android:exported="false" />
 		<activity
