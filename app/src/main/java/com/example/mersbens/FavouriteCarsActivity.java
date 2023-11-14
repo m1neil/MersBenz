@@ -9,6 +9,7 @@ import androidx.recyclerview.widget.RecyclerView;
 import android.content.Intent;
 import android.content.SharedPreferences;
 import android.os.Bundle;
+import android.util.Log;
 
 import java.util.ArrayList;
 import java.util.Arrays;
@@ -44,11 +45,10 @@ public class FavouriteCarsActivity extends AppCompatActivity {
 		SharedPreferences sharedPreferences = getSharedPreferences("user", MODE_PRIVATE);
 		User user = db.getUserByByEmailFullInfo(sharedPreferences.getInt("idUser", 0));
 
+
+		ArrayList<Car> carsList = new ArrayList<>();
 		if (user.getLikeCars().length() > 0) {
-
-
 			List<String> likeCarList = new ArrayList<>(Arrays.asList(user.getLikeCars().split(",")));
-			ArrayList<Car> carsList = new ArrayList<>();
 			for (int i = 0; i < likeCarList.size(); i++) {
 				int idCar = Integer.parseInt(likeCarList.get(i));
 				Car car = db.getCarById(idCar);
@@ -56,13 +56,45 @@ public class FavouriteCarsActivity extends AppCompatActivity {
 					carsList.add(car);
 				}
 			}
+		}
 
-			recyclerView = findViewById(R.id.recyclerViewCars);
-			recyclerView.setHasFixedSize(true);
-			adapter = new CarCardAdapter(carsList, FavouriteCarsActivity.this);
-			layoutManager = new LinearLayoutManager(FavouriteCarsActivity.this);
-			recyclerView.setAdapter(adapter);
-			recyclerView.setLayoutManager(layoutManager);
+		recyclerView = findViewById(R.id.recyclerViewCars);
+		recyclerView.setHasFixedSize(true);
+		adapter = new CarCardAdapter(carsList, FavouriteCarsActivity.this);
+		layoutManager = new LinearLayoutManager(FavouriteCarsActivity.this);
+		recyclerView.setAdapter(adapter);
+		recyclerView.setLayoutManager(layoutManager);
+	}
+
+
+	@Override
+	protected void onResume() {
+		super.onResume();
+		Log.d("onResume", "onResume");
+
+		DatabaseHelper db = new DatabaseHelper(FavouriteCarsActivity.this);
+		SharedPreferences sharedPreferences = getSharedPreferences("user", MODE_PRIVATE);
+		User user = db.getUserByByEmailFullInfo(sharedPreferences.getInt("idUser", 0));
+
+		List<String> likeCarList = new ArrayList<>();
+		if (user.getLikeCars().length() > 0) {
+			likeCarList = new ArrayList<>(Arrays.asList(user.getLikeCars().split(",")));
+		}
+		ArrayList<Car> carsList = new ArrayList<>();
+
+		for (int i = 0; i < likeCarList.size(); i++) {
+			int idCar = Integer.parseInt(likeCarList.get(i));
+			Car car = db.getCarById(idCar);
+			if (car.getId() != 0) {
+				carsList.add(car);
+			}
+		}
+
+		// Проверяем на null перед обновлением адаптера
+		if (adapter != null) {
+			((CarCardAdapter) adapter).updateData(carsList);
+			adapter.notifyDataSetChanged();
 		}
 	}
 }
+

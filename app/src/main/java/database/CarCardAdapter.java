@@ -14,6 +14,7 @@ import androidx.recyclerview.widget.RecyclerView;
 import com.example.mersbens.AboutCarActivity;
 import com.example.mersbens.R;
 
+import java.util.ArrayList;
 import java.util.List;
 
 public class CarCardAdapter extends  RecyclerView.Adapter<CarCardAdapter.CarCardViewHolder> {
@@ -24,6 +25,14 @@ public class CarCardAdapter extends  RecyclerView.Adapter<CarCardAdapter.CarCard
 	public CarCardAdapter(List<Car> cars, Context context) {
 		this.context = context;
 		this.carsList = cars;
+	}
+
+	public void updateData(ArrayList<Car> newCarsList) {
+		this.carsList.clear();  // Очищаем текущий список
+		this.carsList.addAll(newCarsList);  // Заменяем его новыми данными
+		notifyDataSetChanged();
+
+		Log.d("CarCardAdapter", "Data updated. New size: " + newCarsList.size());
 	}
 
 	class CarCardViewHolder extends RecyclerView.ViewHolder implements View.OnClickListener {
