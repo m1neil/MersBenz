@@ -14,13 +14,21 @@
 		tools:targetApi="31">
 		<activity
 			android:name=".FavouriteCarsActivity"
-			android:exported="false" />
+			android:parentActivityName=".MenuCarsActivity"
+			android:exported="false"
+			android:screenOrientation="portrait">
+			<meta-data
+				android:name="android.support.PARENT_ACTIVITY"
+				android:value=".MenuCarsActivity" />
+		</activity>
 		<activity
 			android:name=".LoginActivity"
-			android:exported="false" />
+			android:exported="false"
+			android:screenOrientation="portrait"/>
 		<activity
 			android:name=".RegistrationActivity"
-			android:exported="false" />
+			android:exported="false"
+			android:screenOrientation="portrait"/>
 		<activity
 			android:name=".VideoActivity"
 			android:exported="false"

@@ -36,10 +36,10 @@ public class FavouriteCarsActivity extends AppCompatActivity {
 		toolbar.setTitle("Favourite cars");
 		setSupportActionBar(toolbar);
 
-//		ActionBar actionBar = this.getSupportActionBar();
-//		if (actionBar != null) {
-//			actionBar.setDisplayHomeAsUpEnabled(true);
-//		}
+		ActionBar actionBar = this.getSupportActionBar();
+		if (actionBar != null) {
+			actionBar.setDisplayHomeAsUpEnabled(true);
+		}
 
 		DatabaseHelper db = new DatabaseHelper(FavouriteCarsActivity.this);
 		SharedPreferences sharedPreferences = getSharedPreferences("user", MODE_PRIVATE);
@@ -90,7 +90,6 @@ public class FavouriteCarsActivity extends AppCompatActivity {
 			}
 		}
 
-		// Проверяем на null перед обновлением адаптера
 		if (adapter != null) {
 			((CarCardAdapter) adapter).updateData(carsList);
 			adapter.notifyDataSetChanged();
