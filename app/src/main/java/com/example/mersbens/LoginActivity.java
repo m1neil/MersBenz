@@ -68,10 +68,6 @@ public class LoginActivity extends AppCompatActivity {
 				return;
 			}
 
-			String info = "Info: id: " + user.getId() + " name: " + user.getName() + " email: " + user.getEmail() +
-				" password: " + user.getPassword() + " like car: " + user.getLikeCars();
-			Toast.makeText(this, info, Toast.LENGTH_LONG).show();
-
 			SharedPreferences sharedPreferences = this.getSharedPreferences("user", Context.MODE_PRIVATE);
 			SharedPreferences.Editor sharedEditor = sharedPreferences.edit();
 			sharedEditor.putInt("idUser", user.getId());
