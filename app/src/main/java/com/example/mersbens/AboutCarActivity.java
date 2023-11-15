@@ -129,7 +129,8 @@ public class AboutCarActivity extends AppCompatActivity {
 	public boolean onCreateOptionsMenu(Menu menu) {
 		MenuInflater menuInflater = getMenuInflater();
 		menuInflater.inflate(R.menu.menu, menu);
-
+		MenuItem item3 = menu.findItem(R.id.action_exit);
+		item3.setVisible(false);
 		SharedPreferences sharedPreferences = this.getSharedPreferences("user", Context.MODE_PRIVATE);
 		int idUser = sharedPreferences.getInt("idUser", 0);
 		String likeCars = db.getLikeCars(idUser);

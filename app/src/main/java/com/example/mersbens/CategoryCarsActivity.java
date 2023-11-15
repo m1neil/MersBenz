@@ -70,8 +70,10 @@ public class CategoryCarsActivity extends AppCompatActivity {
 
 		MenuItem item = menu.findItem(R.id.action_favourite);
 		MenuItem item2 = menu.findItem(R.id.action_home);
+		MenuItem item3 = menu.findItem(R.id.action_exit);
 		item.setVisible(false);
 		item2.setVisible(false);
+		item3.setVisible(false);
 		return true;
 	}
 }

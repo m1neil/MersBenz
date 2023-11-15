@@ -120,21 +120,14 @@ public class FavouriteCarsActivity extends AppCompatActivity {
 	}
 
 	private void restartApplication() {
-		// Получаем PackageManager
 		PackageManager packageManager = getPackageManager();
-
-		// Получаем имя вашего приложения
 		String packageName = getPackageName();
-
-		// Создаем интент для запуска нового экземпляра приложения
 		Intent intent = packageManager.getLaunchIntentForPackage(packageName);
 
 		if (intent != null) {
 			intent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
 			intent.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
 			startActivity(intent);
-
-			// Завершаем текущую активность
 			finish();
 		}
 	}
