@@ -62,4 +62,16 @@ public class CategoryCarsActivity extends AppCompatActivity {
 		}
 		return super.onOptionsItemSelected(item);
 	}
+
+	@Override
+	public boolean onCreateOptionsMenu(Menu menu) {
+		MenuInflater menuInflater = getMenuInflater();
+		menuInflater.inflate(R.menu.menu, menu);
+
+		MenuItem item = menu.findItem(R.id.action_favourite);
+		MenuItem item2 = menu.findItem(R.id.action_home);
+		item.setVisible(false);
+		item2.setVisible(false);
+		return true;
+	}
 }

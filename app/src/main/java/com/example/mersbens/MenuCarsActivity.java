@@ -7,6 +7,9 @@ import androidx.recyclerview.widget.RecyclerView;
 import android.content.Intent;
 import android.os.Bundle;
 import android.util.Log;
+import android.view.Menu;
+import android.view.MenuInflater;
+import android.view.MenuItem;
 import android.view.View;
 import android.widget.RelativeLayout;
 import android.widget.Toast;
@@ -90,6 +93,18 @@ public class MenuCarsActivity extends AppCompatActivity {
 		intent.putExtra("category", this.category);
 		intent.putExtra("title", title);
 		startActivity(intent);
+	}
+
+	@Override
+	public boolean onCreateOptionsMenu(Menu menu) {
+		MenuInflater menuInflater = getMenuInflater();
+		menuInflater.inflate(R.menu.menu, menu);
+
+		MenuItem item = menu.findItem(R.id.action_favourite);
+		MenuItem item2 = menu.findItem(R.id.action_home);
+		item.setVisible(false);
+		item2.setVisible(false);
+		return true;
 	}
 
 }
