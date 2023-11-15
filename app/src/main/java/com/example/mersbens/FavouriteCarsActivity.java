@@ -144,8 +144,7 @@ public class FavouriteCarsActivity extends AppCompatActivity {
 			finish();
 		}
 	}
-
-
+	
 	@Override
 	public boolean onCreateOptionsMenu(Menu menu) {
 		MenuInflater menuInflater = getMenuInflater();
