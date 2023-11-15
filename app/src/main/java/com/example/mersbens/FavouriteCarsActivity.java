@@ -18,6 +18,7 @@ import android.util.Log;
 import android.view.Menu;
 import android.view.MenuInflater;
 import android.view.MenuItem;
+import android.widget.Toast;
 
 import java.util.ArrayList;
 import java.util.Arrays;
@@ -113,10 +114,22 @@ public class FavouriteCarsActivity extends AppCompatActivity {
 			sharedEditor.putInt("idUser", 0);
 			sharedEditor.apply();
 			restartApplication();
-
 			return true;
+		} else if (id == R.id.action_clear) {
+			DatabaseHelper db = new DatabaseHelper(FavouriteCarsActivity.this);
+			SharedPreferences sharedPreferences = getSharedPreferences("user", MODE_PRIVATE);
+			User user = db.getUserByByEmailFullInfo(sharedPreferences.getInt("idUser", 0));
+			if (user.getLikeCars().length() > 0) {
+				user.setLikeCars("");
+				db.updateUser(user);
+				Intent intent = getIntent();
+				finish();
+				startActivity(intent);
+			} else {
+				Toast.makeText(this, "Список пустий!", Toast.LENGTH_SHORT).show();
+			}
 		}
-		return super.onOptionsItemSelected(item);
+ 		return super.onOptionsItemSelected(item);
 	}
 
 	private void restartApplication() {
@@ -140,8 +153,10 @@ public class FavouriteCarsActivity extends AppCompatActivity {
 
 		MenuItem item = menu.findItem(R.id.action_favourite);
 		MenuItem item2 = menu.findItem(R.id.action_home);
+		MenuItem item3 = menu.findItem(R.id.action_clear);
 		item.setVisible(false);
 		item2.setVisible(false);
+		item3.setVisible(true);
 		return true;
 	}
 }
