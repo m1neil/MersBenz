@@ -56,11 +56,18 @@ public class RegistrationActivity extends AppCompatActivity {
 //			Toast.makeText(this, "Не всі поля заповнені!", Toast.LENGTH_LONG).show();
 //			return;
 //		}
-
-		if (!isValidEmail(emailString)) {
+		if (nameString.length() < 2) {
+			Toast.makeText(this, "Ім'я повино бути не меньше 2 символів", Toast.LENGTH_SHORT).show();
+			return;
+		} else if (!isValidEmail(emailString)) {
 			Toast.makeText(this, "Ви вели не валідний e-mail", Toast.LENGTH_SHORT).show();
 			return;
+		} else if (passwordString.length() < 4) {
+			Toast.makeText(this, "Пароль повинен бути мінімум 4 символи", Toast.LENGTH_SHORT).show();
+			return;
 		}
+
+
 
 		DatabaseHelper db = new DatabaseHelper(RegistrationActivity.this);
 		int idEmail = db.getUserByEmail(emailString);

@@ -59,6 +59,9 @@ public class LoginActivity extends AppCompatActivity {
 		if (!isValidEmail(email.getText().toString().trim())) {
 			Toast.makeText(this, "Ви вели не валідний e-mail", Toast.LENGTH_SHORT).show();
 			return;
+		} else if (password.getText().toString().length() < 4) {
+			Toast.makeText(this, "Пароль повинен бути мінімум 4 символи", Toast.LENGTH_SHORT).show();
+			return;
 		}
 
 		DatabaseHelper db = new DatabaseHelper(LoginActivity.this);
