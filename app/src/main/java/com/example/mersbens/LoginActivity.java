@@ -50,12 +50,6 @@ public class LoginActivity extends AppCompatActivity {
 			return;
 		}
 
-//		if (email.getText().length() == 0
-//			|| password.getText().length() == 0) {
-//			Toast.makeText(this, "Не всі поля заповнені!", Toast.LENGTH_LONG).show();
-//			return;
-//		}
-
 		if (!isValidEmail(email.getText().toString().trim())) {
 			Toast.makeText(this, "Ви вели не валідний e-mail", Toast.LENGTH_SHORT).show();
 			return;

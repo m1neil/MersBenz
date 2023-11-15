@@ -50,12 +50,6 @@ public class RegistrationActivity extends AppCompatActivity {
 			return;
 		}
 
-
-//		if (name.getText().length() == 0 || email.getText().length() == 0
-//			|| password.getText().length() == 0) {
-//			Toast.makeText(this, "Не всі поля заповнені!", Toast.LENGTH_LONG).show();
-//			return;
-//		}
 		if (nameString.length() < 2) {
 			Toast.makeText(this, "Ім'я повино бути не меньше 2 символів", Toast.LENGTH_SHORT).show();
 			return;
