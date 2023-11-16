@@ -32,9 +32,9 @@ public class UtilTexts {
 	public static final String MERC_1_TRANSMISSION_DESCR = "Потужність силового агрегату, встановленого на автомобілі Mercedes-AMG GT, передається на задні колеса через роботизовану преселективну 7-ступінчасту коробку AMG SPEEDSHIFT DCT з подвійним зчепленням на диференціал обмеженого ковзання, що перекочувала в удосконаленому вигляді з AMG . Розважування складає 47:53 на користь задньої частини.\\n\" +\n" +
 		"Модифікації в кузові родстер оснащуються тією ж 7-ступінчастою роботизованою АКПП, але з новою програмою управління і зміненими передавальними числами: перший ступінь став довшим, а вища (сьома) і головна передача — коротша.";
 	public static final String MERC_1_BRAKE_SYSTEM_DESCR = "на всіх модифікація автомобіля AMG GT встановлена високопродуктивна гальмівна система. Базова версія AMG GT оснащується вентильованими перфорованими гальмівними дисками діаметром 360 мм з обох боків. На модифікацію з літерою «S» встановлюються гальмівні диски діаметром 390 мм спереду і 360 мм ззаду. Керамічна високопродуктивна композитна гальмівна система, що має меншу вагу, більш тривалий термін служби, доступна для обох моделей як опція. У такому варіанті в передній частині автомобіля встановлюються гальмівні диски діаметром 402 мм, а в задній - 360 мм.\\n\" +\n" +
-		"Модифікація Mercedes-AMG GT R у базовій комплектації оснащується вентильованими перфорованими гальмівними дисками діаметром 390 мм спереду та 360 мм ззаду. Як і базовому купе AMG GT, даної версії доступна високопродуктивна керамічна гальмівна система (на замовлення)" +"\n" +
+		"Модифікація Mercedes-AMG GT R у базовій комплектації оснащується вентильованими перфорованими гальмівними дисками діаметром 390 мм спереду та 360 мм ззаду. Як і базовому купе AMG GT, даної версії доступна високопродуктивна керамічна гальмівна система (на замовлення)" + "\n" +
 		"Версії в кузові родстер оснащуються тією ж гальмівною системою, що і AMG GT / AMG GT S: у базовому варіанті GT Roadtser встановлені перфоровані гальмівні диски діаметром 360 мм з обох боків автомобіля, в топовій версії AMG GT C встановлені ті ж диски, але діаметром мм спереду та 360 мм ззаду";
-	public static final String MERC_1_WHEELS_TIRES_DESCR = "Як у кузові купе, так і як родстер, автомобіль оснащується 19-дюймовими передніми (9.0 J x 19) і 19 (11 J x 19) або 20-дюймовими (12.0 J x 20) задніми литими дисками з червоними гальмівними супортами" +"\n" +
+	public static final String MERC_1_WHEELS_TIRES_DESCR = "Як у кузові купе, так і як родстер, автомобіль оснащується 19-дюймовими передніми (9.0 J x 19) і 19 (11 J x 19) або 20-дюймовими (12.0 J x 20) задніми литими дисками з червоними гальмівними супортами" + "\n" +
 		"У базовій версії автомобіля в кузові родстер встановлюються широкопрофільні шини розміром 255/35 R 19 спереду та 295/35 R 19 ззаду. У модифікації AMG GT C Roadtser спереду встановлюються шини розміром 265/35 R19, ззаду - 305/30 R 20";
 	public static final String MERC_1_ELECTRICAL_EQUIPMENT = "Автомобіль Mercedes-AMG GT оснащений адаптивною AMG підвіскою, 3-етапною системою AMG ESP , парктрониками, системою об'ємного звучання Burmester , технологією Keyless-Go , системою COMAND , камерою заднього виду, системою Collision Prevention Assist PLUS , кріслами AMG 8 подушками безпеки, 2-зональним клімат-контролем THERMOTRONIC , круїз-контролем з технологією SPEEDTRONIC та світлодіодними фарами.";
 
@@ -135,9 +135,99 @@ public class UtilTexts {
 	public static final String MERC_5_WHEELS_TIRES_DESCR = "Легкосплавні диски з високопрофільними шинами, що підсилюють агресивний вигляд та функціональність.";
 	public static final String MERC_5_ELECTRICAL_EQUIPMENT = "Продумана система інфотейнменту, адаптивний круїз-контроль та інші передові технології для максимального комфорту та безпеки.";
 
+	//	#5
+	public static final int MERC_6_IMAGE_1 = R.drawable.mercedes_eqe_suv;
+	public static final int MERC_6_IMAGE_2 = R.drawable.mercedes_eqe_suv_2;
+	public static final int MERC_6_VIDEO = R.raw.mercedes_eqe_suv;
+	public static final String MERC_6_MODEL = "Mercedes EQE SUV";
+	public static final String MERC_6_DESCRIPTION = "Mercedes EQE SUV - це електричний кросовер від престижного німецького виробника, який поєднує ексклюзивний дизайн, передові технології та ефективність у використанні електроенергії.";
+	public static final String MERC_6_YEAR = "2023 рік";
+	public static final String MERC_6_COUNTRY = "Німеччина";
+	public static final String MERC_6_DOORS_PLACES = "4 дверей, 5 місць";
+	public static final String MERC_6_MAX_SPEED = "210 км/год";
+	public static final String MERC_6_TYPE_TRANSMISSION = "Автоматична";
+	public static final String MERC_6_DRIVE_UNIT = "Задній ";
+	public static final String MERC_6_FUEL_TYPE = "Електроенергія";
+	public static final String MERC_6_FUEL_TANK_CAPACITY = "90,6 кВт/год";
+	public static final String MERC_6_MIDDLE_PRICE = "52 750$";
+	public static final String MERC_6_CATEGORY = "electric";
+	public static final String MERC_6_ENGINE = "EQE 350+";
+	public static final String MERC_6_ENGINE_DESCR = "Всі електромотори EQE SUV встановлені на задній осі. Вони живляться від акумуляторної батареї ємністю 90,6 кВт·год. Час зарядки батареї від 10 до 80% на швидкісній зарядній станції становить 31 хвилину";
+	public static final String MERC_6_SUSPENSION_DESCR = "EQE SUV має передню підвіску типу McPherson і задню підвіску типу багатоважільна. У базовій комплектації автомобіль оснащений амортизаторами з регульованою жорсткістю";
+	public static final String MERC_6_TRANSMISSION_DESCR = "EQE SUV оснащений безступінчастою автоматичною трансмісією. Вона забезпечує плавне і комфортне перемикання передач";
+	public static final String MERC_6_BRAKE_SYSTEM_DESCR = "EQE SUV оснащений дисковими гальмами на всіх колесах. Передні гальма вентильовані";
+	public static final String MERC_6_WHEELS_TIRES_DESCR = "EQE SUV штатно оснащується легкосплавними колесами діаметром 19 дюймів. Опційно доступні колеса діаметром 20 або 21 дюйм.";
+	public static final String MERC_6_ELECTRICAL_EQUIPMENT = "EQE SUV оснащений широким спектром електрообладнання, включаючи:\n" +
+		"\n" +
+		"систему автоматичного гальмування з розпізнаванням пішоходів і велосипедистів\n" +
+		"систему адаптивного круїз-контролю\n" +
+		"систему утримання в смузі руху\n" +
+		"систему розпізнавання дорожніх знаків\n" +
+		"систему кругового огляду\n" +
+		"панорамний дах\n" +
+		"аудіосистему Burmester";
+
+	public static final int MERC_7_IMAGE_1 = R.drawable.mercedes_benz_g_class;
+	public static final int MERC_7_IMAGE_2 = R.drawable.mercedes_benz_g_class_2;
+	public static final int MERC_7_VIDEO = R.raw.mercedes_benz_g_class;
+	public static final String MERC_7_MODEL = "Mercedes-Benz G-Class ";
+	public static final String MERC_7_DESCRIPTION = "Mercedes-Benz G-Class - це позашляховик преміум-класу, який виробляється з 1979 року. Автомобіль відомий своїм унікальним дизайном, надійністю та позашляховими можливостями. G-Class має квадратний кузов з характерними похилими фарами, прямокутною решіткою радіатора та двома дверима багажника. Автомобіль доступний у трьох-дверної та п'ятидверної версіях.";
+	public static final String MERC_7_YEAR = "2023 рік";
+	public static final String MERC_7_COUNTRY = "Німеччина";
+	public static final String MERC_7_DOORS_PLACES = "4 дверей, 5 місць";
+	public static final String MERC_7_MAX_SPEED = "210 км/год";
+	public static final String MERC_7_TYPE_TRANSMISSION = "9-ступінчаста автоматична";
+	public static final String MERC_7_DRIVE_UNIT = "Задній або повний";
+	public static final String MERC_7_FUEL_TYPE = "Бензин";
+	public static final String MERC_7_FUEL_TANK_CAPACITY = "100 л";
+	public static final String MERC_7_MIDDLE_PRICE = "100 000$";
+	public static final String MERC_7_CATEGORY = "suvs";
+	public static final String MERC_7_ENGINE = "G 350 d";
+	public static final String MERC_7_ENGINE_DESCR = "Усі двигуни G-Class встановлені передньою частиною вперед і живляться від 9-ступінчастої автоматичної трансмісії.";
+	public static final String MERC_7_SUSPENSION_DESCR = "G-Class має передню підвіску типу McPherson і задню підвіску типу багатоважільна. Автомобіль також оснащений пневматичною підвіскою, яка дозволяє регулювати дорожній просвіт.";
+	public static final String MERC_7_TRANSMISSION_DESCR = "G-Class оснащений 9-ступінчастою автоматичною трансмісією, яка забезпечує плавне і комфортне перемикання передач.";
+	public static final String MERC_7_BRAKE_SYSTEM_DESCR = "G-Class оснащений дисковими гальмами на всіх колесах. Передні гальма вентильовані.";
+	public static final String MERC_7_WHEELS_TIRES_DESCR = "G-Class штатно оснащується легкосплавними колесами діаметром 18 дюймів. Опційно доступні колеса діаметром 19, 20 або 21 дюйм.";
+	public static final String MERC_7_ELECTRICAL_EQUIPMENT = "G-Class оснащений широким спектром електрообладнання, включаючи:\n" +
+		"систему автоматичного гальмування з розпізнаванням пішоходів і велосипедистів\n" +
+		"систему адаптивного круїз-контролю\n" +
+		"систему утримання в смузі руху\n" +
+		"систему розпізнавання дорожніх знаків\n" +
+		"систему кругового огляду\n" +
+		"панорамний дах\n" +
+		"аудіосистему Burmester";
+
+ public static final int MERC_8_IMAGE_1 = R.drawable.mercedes_benz_glc;
+ public static final int MERC_8_IMAGE_2 = R.drawable.mercedes_benz_glc_2;
+ public static final int MERC_8_VIDEO = R.raw.mercedes_benz_glc;
+ public static final String MERC_8_MODEL = "Mercedes-Benz GLC";
+ public static final String MERC_8_DESCRIPTION = "GLC має стильний і сучасний дизайн. Передня частина автомобіля з характерними фарами Mercedes-Benz з двома смужками і широкою решіткою радіатора. Бічна частина автомобіля має плавні обриси і короткі свеси. Задня частина автомобіля з двома секційними фарами і суцільною світлодіодною смугою.";
+ public static final String MERC_8_YEAR = "2023 рік";
+ public static final String MERC_8_COUNTRY = "Німеччина";
+ public static final String MERC_8_DOORS_PLACES = "4 дверей, 5 місць";
+ public static final String MERC_8_MAX_SPEED = "250 км/год";
+ public static final String MERC_8_TYPE_TRANSMISSION = "9-ступінчаста автоматична";
+ public static final String MERC_8_DRIVE_UNIT = "Задній або повний";
+ public static final String MERC_8_FUEL_TYPE = "Бензин, дизель";
+ public static final String MERC_8_FUEL_TANK_CAPACITY = "66 л";
+ public static final String MERC_8_MIDDLE_PRICE = "60 000$";
+ public static final String MERC_8_CATEGORY = "suvs";
+ public static final String MERC_8_ENGINE = "GLC 200";
+ public static final String MERC_8_ENGINE_DESCR = "Усі двигуни GLC встановлені передньою частиною вперед і живляться від 9-ступінчастої автоматичної трансмісії.";
+ public static final String MERC_8_SUSPENSION_DESCR = "GLC має передню підвіску типу McPherson і задню підвіску типу багатоважільна.";
+ public static final String MERC_8_TRANSMISSION_DESCR = "GLC оснащений 9-ступінчастою автоматичною трансмісією, яка забезпечує плавне і комфортне перемикання передач.";
+ public static final String MERC_8_BRAKE_SYSTEM_DESCR = "GLC оснащений дисковими гальмами на всіх колесах. Передні гальма вентильовані.";
+ public static final String MERC_8_WHEELS_TIRES_DESCR = "GLC штатно оснащується легкосплавними колесами діаметром 18 дюймів. Опційно доступні колеса діаметром 19, 20 або 21 дюйм.";
+ public static final String MERC_8_ELECTRICAL_EQUIPMENT = "GLC оснащений широким спектром електрообладнання, включаючи:\n" +
+	 "систему автоматичного гальмування з розпізнаванням пішоходів і велосипедистів\n" +
+	 "систему адаптивного круїз-контролю\n" +
+	 "систему утримання в смузі руху\n" +
+	 "систему розпізнавання дорожніх знаків\n" +
+	 "систему кругового огляду\n" +
+	 "панорамний дах\n" +
+	 "аудіосистему Burmester";
 
 
-//
 //
 //	public static final int MERC_2_IMAGE_1 = R.drawable.;
 //	public static final int MERC_2_IMAGE_2 = R.drawable.;

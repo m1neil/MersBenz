@@ -48,7 +48,6 @@ public class MenuCarsActivity extends AppCompatActivity {
 			}
 		}
 
-
 		recyclerViewSportCars = findViewById(R.id.relativeLayoutSportCar);
 		recyclerViewSuvsCars = findViewById(R.id.relativeLayoutSuvsCars);
 		recyclerViewElectricCars = findViewById(R.id.relativeLayoutElectricCars);
@@ -66,19 +65,18 @@ public class MenuCarsActivity extends AppCompatActivity {
 		recyclerViewSuvsCars.setOnClickListener(new View.OnClickListener() {
 			@Override
 			public void onClick(View v) {
-
 				category = "suvs";
 				title = "SUVs Cars";
-				Toast.makeText(MenuCarsActivity.this, "У розробці", Toast.LENGTH_LONG).show();
-//				createNewActivity();
+				createNewActivity();
 			}
 		});
 
 		recyclerViewElectricCars.setOnClickListener(new View.OnClickListener() {
 			@Override
 			public void onClick(View v) {
-				Toast.makeText(MenuCarsActivity.this, "У розробці", Toast.LENGTH_LONG).show();
 				category = "electric";
+				title = "ELECTRIC Cars";
+				createNewActivity();
 			}
 		});
 
