@@ -5,14 +5,14 @@
 	android:id="@+id/action_home"
 	android:icon="@drawable/icon_bakc_home"
 	android:orderInCategory="2"
-	android:title="Home"
+	android:title="До дому"
 	app:showAsAction="always" />
 
 	<item
 		android:id="@+id/action_favourite"
 		android:icon="@drawable/icon_not_favorite"
 		android:orderInCategory="1"
-		android:title="Home"
+		android:title="Улюбленні"
 		app:showAsAction="always" />
 
 	<item
