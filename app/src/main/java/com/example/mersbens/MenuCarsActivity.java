@@ -69,7 +69,8 @@ public class MenuCarsActivity extends AppCompatActivity {
 
 				category = "suvs";
 				title = "SUVs Cars";
-				createNewActivity();
+				Toast.makeText(MenuCarsActivity.this, "У розробці", Toast.LENGTH_LONG).show();
+//				createNewActivity();
 			}
 		});
 

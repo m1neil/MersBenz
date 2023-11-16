@@ -151,6 +151,7 @@ public class AboutCarActivity extends AppCompatActivity {
 			NavUtils.navigateUpFromSameTask(this);
 		} else if (idItem == R.id.action_home) {
 			Intent intent = new Intent(AboutCarActivity.this, MenuCarsActivity.class);
+			intent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
 			startActivity(intent);
 			finish();
 			return true;

@@ -88,6 +88,7 @@ public class VideoActivity extends AppCompatActivity {
 			NavUtils.navigateUpFromSameTask(this);
 		} else if (id == R.id.action_home) {
 			Intent intent = new Intent(VideoActivity.this, MenuCarsActivity.class);
+			intent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
 			startActivity(intent);
 			finish();
 			return true;
