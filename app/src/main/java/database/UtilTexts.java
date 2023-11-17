@@ -305,29 +305,26 @@ public class UtilTexts {
 	public static final String MERC_11_WHEELS_TIRES_DESCR = "18-дюймові легкосплавні диски, шини розмірністю 235/55 R18.";
 	public static final String MERC_11_ELECTRICAL_EQUIPMENT = "Передні фари LED, задні ліхтарі LED, система адаптивного круїз-контролю, система допомоги при перестрочуванні, система контролю сліпих зон, система попередження про фронтальні зіткнення, система автоматичного гальмування в екстрених ситуаціях, система допомоги при паркуванні.";
 
-
-//
-//	public static final int MERC_2_IMAGE_1 = R.drawable.;
-//	public static final int MERC_2_IMAGE_2 = R.drawable.;
-//	public static final int MERC_2_VIDEO = R.raw.;
-//	public static final String MERC_2_MODEL = "";
-//	public static final String MERC_2_DESCRIPTION = "";
-//	public static final String MERC_2_YEAR = " рік";
-//	public static final String MERC_2_COUNTRY = "Німеччина";
-//	public static final String MERC_2_DOORS_PLACES = "";
-//	public static final String MERC_2_MAX_SPEED = "";
-//	public static final String MERC_2_TYPE_TRANSMISSION = "";
-//	public static final String MERC_2_DRIVE_UNIT = "";
-//	public static final String MERC_2_FUEL_TYPE = "";
-//	public static final String MERC_2_FUEL_TANK_CAPACITY = "";
-//	public static final String MERC_2_MIDDLE_PRICE = "";
-//	public static final String MERC_2_CATEGORY = "sport";
-//	public static final String MERC_2_ENGINE = "";
-//	public static final String MERC_2_ENGINE_DESCR = "";
-//	public static final String MERC_2_SUSPENSION_DESCR = "";
-//	public static final String MERC_2_TRANSMISSION_DESCR = "";
-//	public static final String MERC_2_BRAKE_SYSTEM_DESCR = "";
-//	public static final String MERC_2_WHEELS_TIRES_DESCR = "";
-//	public static final String MERC_2_ELECTRICAL_EQUIPMENT = "";
-
+	public static final int MERC_12_IMAGE_1 = R.drawable.eqc;
+	public static final int MERC_12_IMAGE_2 = R.drawable.eqc_2;
+	public static final int MERC_12_VIDEO = R.raw.eqc;
+	public static final String MERC_12_MODEL = "Mercedes-Benz EQC";
+	public static final String MERC_12_DESCRIPTION = "Mercedes-Benz EQC 2023 - це п'ятидверний п'ятимісний електричний позашляховик середнього класу, що випускається компанією Mercedes-Benz. Модель є першою в лінійці електромобілів суббренду Mercedes-EQ. ";
+	public static final String MERC_12_YEAR = "2023 рік";
+	public static final String MERC_12_COUNTRY = "Німеччина";
+	public static final String MERC_12_DOORS_PLACES = "4 дверей, 5 місць";
+	public static final String MERC_12_MAX_SPEED = "180 км/год";
+	public static final String MERC_12_TYPE_TRANSMISSION = "Автоматична";
+	public static final String MERC_12_DRIVE_UNIT = "Повний";
+	public static final String MERC_12_FUEL_TYPE = "Електроенергія";
+	public static final String MERC_12_FUEL_TANK_CAPACITY = "80 кВт/год";
+	public static final String MERC_12_MIDDLE_PRICE = "40 500$";
+	public static final String MERC_12_CATEGORY = "electric";
+	public static final String MERC_12_ENGINE = "765 Нм";
+	public static final String MERC_12_ENGINE_DESCR = "Два асинхронних електродвигуна потужністю 204 кінських сил кожен, загальна потужність - 408 кінських сил і крутний момент - 765 Нм.";
+	public static final String MERC_12_SUSPENSION_DESCR = "Незалежна передня підвіска типу McPherson з пружинами і амортизаторами, незалежна задня підвіска з багатоважільною схемою.";
+	public static final String MERC_12_TRANSMISSION_DESCR = "Одношвидкісна автоматична трансмісія.";
+	public static final String MERC_12_BRAKE_SYSTEM_DESCR = "Дискові гальма на всіх колесах, вентильовані передні гальмівні диски.";
+	public static final String MERC_12_WHEELS_TIRES_DESCR = "19-дюймові легкосплавні диски, шини розмірністю 235/55 R19.";
+	public static final String MERC_12_ELECTRICAL_EQUIPMENT = "Передні фари LED, задні ліхтарі LED, система адаптивного круїз-контролю, система допомоги при перестрочуванні, система контролю сліпих зон, система попередження про фронтальні зіткнення, система автоматичного гальмування в екстрених ситуаціях, система допомоги при паркуванні.";
 }

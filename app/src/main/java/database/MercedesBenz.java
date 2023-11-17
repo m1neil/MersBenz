@@ -262,9 +262,31 @@ public class MercedesBenz {
 			UtilTexts.MERC_11_WHEELS_TIRES_DESCR,
 			UtilTexts.MERC_11_ELECTRICAL_EQUIPMENT
 		));
-
+		cars.add(new Car(
+			UtilTexts.MERC_12_IMAGE_1,
+			UtilTexts.MERC_12_IMAGE_2,
+			UtilTexts.MERC_12_VIDEO,
+			UtilTexts.MERC_12_MODEL,
+			UtilTexts.MERC_12_DESCRIPTION,
+			UtilTexts.MERC_12_YEAR,
+			UtilTexts.MERC_12_COUNTRY,
+			UtilTexts.MERC_12_DOORS_PLACES,
+			UtilTexts.MERC_12_MAX_SPEED,
+			UtilTexts.MERC_12_TYPE_TRANSMISSION,
+			UtilTexts.MERC_12_DRIVE_UNIT,
+			UtilTexts.MERC_12_FUEL_TYPE,
+			UtilTexts.MERC_12_FUEL_TANK_CAPACITY,
+			UtilTexts.MERC_12_MIDDLE_PRICE,
+			UtilTexts.MERC_12_CATEGORY,
+			UtilTexts.MERC_12_ENGINE,
+			UtilTexts.MERC_12_ENGINE_DESCR,
+			UtilTexts.MERC_12_SUSPENSION_DESCR,
+			UtilTexts.MERC_12_TRANSMISSION_DESCR,
+			UtilTexts.MERC_12_BRAKE_SYSTEM_DESCR,
+			UtilTexts.MERC_12_WHEELS_TIRES_DESCR,
+			UtilTexts.MERC_12_ELECTRICAL_EQUIPMENT
+		));
 	}
-
 
 	public ArrayList<Car> getArrayList() {
 		return this.cars;
