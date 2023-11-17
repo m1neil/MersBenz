@@ -227,6 +227,84 @@ public class UtilTexts {
 	 "панорамний дах\n" +
 	 "аудіосистему Burmester";
 
+	public static final int MERC_9_IMAGE_1 = R.drawable.gla;
+	public static final int MERC_9_IMAGE_2 = R.drawable.gla_2;
+	public static final int MERC_9_VIDEO = R.raw.gla;
+	public static final String MERC_9_MODEL = "Mercedes-Benz GLA";
+	public static final String MERC_9_DESCRIPTION = "Mercedes-Benz GLA - це компактний преміум-кросовер, який виробляється з 2013 року. Автомобіль є меншим і більш доступним, ніж GLC, і конкурує з такими автомобілями, як BMW X1 і Audi Q3.\n" +
+		"GLA має стильний і сучасний дизайн. Передня частина автомобіля з характерними фарами Mercedes-Benz з двома смужками і широкою решіткою радіатора. Бічна частина автомобіля має плавні обриси і короткі свеси. Задня частина автомобіля з двома секційними фарами і суцільною світлодіодною смугою.\n" +
+		"Салон GLA виконаний з високоякісних матеріалів і оснащений сучасним обладнанням. Приладна панель представлена двома великими дисплеями MBUX діагоналлю 10,25 і 12,3 дюймів. Також в салоні є панорамний дах, аудіосистема Burmester, система кругового огляду і багато іншого.";
+	public static final String MERC_9_YEAR = "2023 рік";
+	public static final String MERC_9_COUNTRY = "Німеччина";
+	public static final String MERC_9_DOORS_PLACES = "4 дверей, 5 місць";
+	public static final String MERC_9_MAX_SPEED = "240 км/год";
+	public static final String MERC_9_TYPE_TRANSMISSION = "8-ступінчаста автоматична";
+	public static final String MERC_9_DRIVE_UNIT = "Повний";
+	public static final String MERC_9_FUEL_TYPE = "Бензин, дизель";
+	public static final String MERC_9_FUEL_TANK_CAPACITY = "56 л";
+	public static final String MERC_9_MIDDLE_PRICE = "65 000$";
+	public static final String MERC_9_CATEGORY = "suvs";
+	public static final String MERC_9_ENGINE = "GLA 250d";
+	public static final String MERC_9_ENGINE_DESCR = "Усі двигуни GLA встановлені передньою частиною вперед і живляться від 8-ступінчастої автоматичної трансмісії.";
+	public static final String MERC_9_SUSPENSION_DESCR = "GLA має передню підвіску типу McPherson і задню підвіску типу багатоважільна.";
+	public static final String MERC_9_TRANSMISSION_DESCR = "GLA оснащений 8-ступінчастою автоматичною трансмісією, яка забезпечує плавне і комфортне перемикання передач.";
+	public static final String MERC_9_BRAKE_SYSTEM_DESCR = "GLA оснащений дисковими гальмами на всіх колесах. Передні гальма вентильовані.";
+	public static final String MERC_9_WHEELS_TIRES_DESCR = "GLA штатно оснащується легкосплавними колесами діаметром 18 дюймів. Опційно доступні колеса діаметром 19, 20 або 21 дюйм.";
+	public static final String MERC_9_ELECTRICAL_EQUIPMENT = "GLA оснащений широким спектром електрообладнання, включаючи:\n" +
+		"систему автоматичного гальмування з розпізнаванням пішоходів і велосипедистів\n" +
+		"систему адаптивного круїз-контролю\n" +
+		"систему утримання в смузі руху\n" +
+		"систему розпізнавання дорожніх знаків\n" +
+		"систему кругового огляду\n" +
+		"панорамний дах\n" +
+		"аудіосистему Burmester";
+
+	public static final int MERC_10_IMAGE_1 = R.drawable.gle;
+	public static final int MERC_10_IMAGE_2 = R.drawable.gle_2;
+	public static final int MERC_10_VIDEO = R.raw.gle;
+	public static final String MERC_10_MODEL = "Mercedes-Benz GLE";
+	public static final String MERC_10_DESCRIPTION = "Mercedes-Benz GLE 2023 - це п'ятидверний семимісний позашляховик преміум-класу, що випускається компанією Mercedes-Benz. Модель є четвертим поколінням GLE-класу і дебютувала в 2018 році.";
+	public static final String MERC_10_YEAR = "2023 рік";
+	public static final String MERC_10_COUNTRY = "Німеччина";
+	public static final String MERC_10_DOORS_PLACES = "4 дверей, 7 місць";
+	public static final String MERC_10_MAX_SPEED = "240 км/год";
+	public static final String MERC_10_TYPE_TRANSMISSION = "9-ступінчаста автоматична";
+	public static final String MERC_10_DRIVE_UNIT = "Повний";
+	public static final String MERC_10_FUEL_TYPE = "Бензин";
+	public static final String MERC_10_FUEL_TANK_CAPACITY = "85 л";
+	public static final String MERC_10_MIDDLE_PRICE = "38 000$";
+	public static final String MERC_10_CATEGORY = "suvs";
+	public static final String MERC_10_ENGINE = "M254";
+	public static final String MERC_10_ENGINE_DESCR = "Бензиновий турбований чотирициліндровий двигун об'ємом 2,0 літри, потужністю 258 кінських сил і крутним моментом 370 Нм.";
+	public static final String MERC_10_SUSPENSION_DESCR = "Незалежна передня підвіска типу McPherson з пружинами і амортизаторами, незалежна задня підвіска з багатоважільною схемою, пневмопідвіска доступна як опція.";
+	public static final String MERC_10_TRANSMISSION_DESCR = "9G-TRONIC";
+	public static final String MERC_10_BRAKE_SYSTEM_DESCR = "Дискові гальма на всіх колесах, вентильовані передні гальмівні диски.";
+	public static final String MERC_10_WHEELS_TIRES_DESCR = "Передні фари LED, задні ліхтарі LED, система адаптивного круїз-контролю, система допомоги при перестрочуванні, система контролю сліпих зон, система попередження про фронтальні зіткнення, система автоматичного гальмування в екстрених ситуаціях, система допомоги при паркуванні.";
+	public static final String MERC_10_ELECTRICAL_EQUIPMENT = "Панорамний дах, шкіряний салон, мультимедійна система MBUX з двома 12,3-дюймовими дисплеями, система аудіо Burmester, панорамний дах, система кругового огляду, система ночного бачення.";
+
+	public static final int MERC_11_IMAGE_1 = R.drawable.eqa;
+	public static final int MERC_11_IMAGE_2 = R.drawable.eqa_2;
+	public static final int MERC_11_VIDEO = R.raw.eqa;
+	public static final String MERC_11_MODEL = "Mercedes-Benz EQA";
+	public static final String MERC_11_DESCRIPTION = "Mercedes-Benz EQA 2023 - це п'ятидверний п'ятимісний електричний позашляховик компактного класу, що випускається компанією Mercedes-Benz. Модель є першою в лінійці електромобілів суббренду Mercedes-EQ.";
+	public static final String MERC_11_YEAR = "2023 рік";
+	public static final String MERC_11_COUNTRY = "Німеччина";
+	public static final String MERC_11_DOORS_PLACES = "4 дверей, 5 місць";
+	public static final String MERC_11_MAX_SPEED = "160 км/год";
+	public static final String MERC_11_TYPE_TRANSMISSION = "одношвидкісна автоматична";
+	public static final String MERC_11_DRIVE_UNIT = "Передній";
+	public static final String MERC_11_FUEL_TYPE = "Електроенергія";
+	public static final String MERC_11_FUEL_TANK_CAPACITY = "66,5 кВт/год";
+	public static final String MERC_11_MIDDLE_PRICE = "27 000$";
+	public static final String MERC_11_CATEGORY = "electric";
+	public static final String MERC_11_ENGINE = "EM271";
+	public static final String MERC_11_ENGINE_DESCR = "Асинхронний електродвигун потужністю 190 кінських сил і крутним моментом 375 Нм.";
+	public static final String MERC_11_SUSPENSION_DESCR = "Незалежна передня підвіска типу McPherson з пружинами і амортизаторами, незалежна задня підвіска з багатоважільною схемою.";
+	public static final String MERC_11_TRANSMISSION_DESCR = "Одношвидкісна автоматична трансмісія.";
+	public static final String MERC_11_BRAKE_SYSTEM_DESCR = "Дискові гальма на всіх колесах, вентильовані передні гальмівні диски.";
+	public static final String MERC_11_WHEELS_TIRES_DESCR = "18-дюймові легкосплавні диски, шини розмірністю 235/55 R18.";
+	public static final String MERC_11_ELECTRICAL_EQUIPMENT = "Передні фари LED, задні ліхтарі LED, система адаптивного круїз-контролю, система допомоги при перестрочуванні, система контролю сліпих зон, система попередження про фронтальні зіткнення, система автоматичного гальмування в екстрених ситуаціях, система допомоги при паркуванні.";
+
 
 //
 //	public static final int MERC_2_IMAGE_1 = R.drawable.;
@@ -251,27 +329,5 @@ public class UtilTexts {
 //	public static final String MERC_2_BRAKE_SYSTEM_DESCR = "";
 //	public static final String MERC_2_WHEELS_TIRES_DESCR = "";
 //	public static final String MERC_2_ELECTRICAL_EQUIPMENT = "";
-//
-//	public static final int MERC_2_IMAGE_1 = R.drawable.;
-//	public static final int MERC_2_IMAGE_2 = R.drawable.;
-//	public static final int MERC_2_VIDEO = R.raw.;
-//	public static final String MERC_2_MODEL = "";
-//	public static final String MERC_2_DESCRIPTION = "";
-//	public static final String MERC_2_YEAR = " рік";
-//	public static final String MERC_2_COUNTRY = "Німеччина";
-//	public static final String MERC_2_DOORS_PLACES = "";
-//	public static final String MERC_2_MAX_SPEED = "";
-//	public static final String MERC_2_TYPE_TRANSMISSION = "";
-//	public static final String MERC_2_DRIVE_UNIT = "";
-//	public static final String MERC_2_FUEL_TYPE = "";
-//	public static final String MERC_2_FUEL_TANK_CAPACITY = "";
-//	public static final String MERC_2_MIDDLE_PRICE = "";
-//	public static final String MERC_2_CATEGORY = "sport";
-//	public static final String MERC_2_ENGINE = "";
-//	public static final String MERC_2_ENGINE_DESCR = "";
-//	public static final String MERC_2_SUSPENSION_DESCR = "";
-//	public static final String MERC_2_TRANSMISSION_DESCR = "";
-//	public static final String MERC_2_BRAKE_SYSTEM_DESCR = "";
-//	public static final String MERC_2_WHEELS_TIRES_DESCR = "";
-//	public static final String MERC_2_ELECTRICAL_EQUIPMENT = "";
+
 }

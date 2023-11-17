@@ -190,6 +190,79 @@ public class MercedesBenz {
 			UtilTexts.MERC_8_WHEELS_TIRES_DESCR,
 			UtilTexts.MERC_8_ELECTRICAL_EQUIPMENT
 		));
+		cars.add(new Car(
+			UtilTexts.MERC_9_IMAGE_1,
+			UtilTexts.MERC_9_IMAGE_2,
+			UtilTexts.MERC_9_VIDEO,
+			UtilTexts.MERC_9_MODEL,
+			UtilTexts.MERC_9_DESCRIPTION,
+			UtilTexts.MERC_9_YEAR,
+			UtilTexts.MERC_9_COUNTRY,
+			UtilTexts.MERC_9_DOORS_PLACES,
+			UtilTexts.MERC_9_MAX_SPEED,
+			UtilTexts.MERC_9_TYPE_TRANSMISSION,
+			UtilTexts.MERC_9_DRIVE_UNIT,
+			UtilTexts.MERC_9_FUEL_TYPE,
+			UtilTexts.MERC_9_FUEL_TANK_CAPACITY,
+			UtilTexts.MERC_9_MIDDLE_PRICE,
+			UtilTexts.MERC_9_CATEGORY,
+			UtilTexts.MERC_9_ENGINE,
+			UtilTexts.MERC_9_ENGINE_DESCR,
+			UtilTexts.MERC_9_SUSPENSION_DESCR,
+			UtilTexts.MERC_9_TRANSMISSION_DESCR,
+			UtilTexts.MERC_9_BRAKE_SYSTEM_DESCR,
+			UtilTexts.MERC_9_WHEELS_TIRES_DESCR,
+			UtilTexts.MERC_9_ELECTRICAL_EQUIPMENT
+		));
+		cars.add(new Car(
+			UtilTexts.MERC_10_IMAGE_1,
+			UtilTexts.MERC_10_IMAGE_2,
+			UtilTexts.MERC_10_VIDEO,
+			UtilTexts.MERC_10_MODEL,
+			UtilTexts.MERC_10_DESCRIPTION,
+			UtilTexts.MERC_10_YEAR,
+			UtilTexts.MERC_10_COUNTRY,
+			UtilTexts.MERC_10_DOORS_PLACES,
+			UtilTexts.MERC_10_MAX_SPEED,
+			UtilTexts.MERC_10_TYPE_TRANSMISSION,
+			UtilTexts.MERC_10_DRIVE_UNIT,
+			UtilTexts.MERC_10_FUEL_TYPE,
+			UtilTexts.MERC_10_FUEL_TANK_CAPACITY,
+			UtilTexts.MERC_10_MIDDLE_PRICE,
+			UtilTexts.MERC_10_CATEGORY,
+			UtilTexts.MERC_10_ENGINE,
+			UtilTexts.MERC_10_ENGINE_DESCR,
+			UtilTexts.MERC_10_SUSPENSION_DESCR,
+			UtilTexts.MERC_10_TRANSMISSION_DESCR,
+			UtilTexts.MERC_10_BRAKE_SYSTEM_DESCR,
+			UtilTexts.MERC_10_WHEELS_TIRES_DESCR,
+			UtilTexts.MERC_10_ELECTRICAL_EQUIPMENT
+		));
+		cars.add(new Car(
+			UtilTexts.MERC_11_IMAGE_1,
+			UtilTexts.MERC_11_IMAGE_2,
+			UtilTexts.MERC_11_VIDEO,
+			UtilTexts.MERC_11_MODEL,
+			UtilTexts.MERC_11_DESCRIPTION,
+			UtilTexts.MERC_11_YEAR,
+			UtilTexts.MERC_11_COUNTRY,
+			UtilTexts.MERC_11_DOORS_PLACES,
+			UtilTexts.MERC_11_MAX_SPEED,
+			UtilTexts.MERC_11_TYPE_TRANSMISSION,
+			UtilTexts.MERC_11_DRIVE_UNIT,
+			UtilTexts.MERC_11_FUEL_TYPE,
+			UtilTexts.MERC_11_FUEL_TANK_CAPACITY,
+			UtilTexts.MERC_11_MIDDLE_PRICE,
+			UtilTexts.MERC_11_CATEGORY,
+			UtilTexts.MERC_11_ENGINE,
+			UtilTexts.MERC_11_ENGINE_DESCR,
+			UtilTexts.MERC_11_SUSPENSION_DESCR,
+			UtilTexts.MERC_11_TRANSMISSION_DESCR,
+			UtilTexts.MERC_11_BRAKE_SYSTEM_DESCR,
+			UtilTexts.MERC_11_WHEELS_TIRES_DESCR,
+			UtilTexts.MERC_11_ELECTRICAL_EQUIPMENT
+		));
+
 	}
 
 
