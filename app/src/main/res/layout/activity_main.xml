@@ -29,7 +29,7 @@
 		android:layout_marginTop="20dp"
 		android:scaleX="0"
 		android:scaleY="0"
-		android:text="MersBens"
+		android:text="MersBenz"
 		android:textAlignment="center"
 		android:textColor="@color/white"
 		android:textSize="27sp"
