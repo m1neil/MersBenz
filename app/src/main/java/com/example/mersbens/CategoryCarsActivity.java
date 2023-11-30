@@ -52,8 +52,6 @@ public class CategoryCarsActivity extends AppCompatActivity {
 		recyclerView.setLayoutManager(layoutManager);
 	}
 
-
-
 	@Override
 	public boolean onOptionsItemSelected(MenuItem item) {
 		int id = item.getItemId();
