@@ -88,6 +88,7 @@ public class VideoActivity extends AppCompatActivity {
 			NavUtils.navigateUpFromSameTask(this);
 		} else if (id == R.id.action_home) {
 			Intent intent = new Intent(VideoActivity.this, MenuCarsActivity.class);
+			intent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
 			startActivity(intent);
 			finish();
 			return true;
@@ -100,6 +101,11 @@ public class VideoActivity extends AppCompatActivity {
 	public boolean onCreateOptionsMenu(Menu menu) {
 		MenuInflater menuInflater = getMenuInflater();
 		menuInflater.inflate(R.menu.menu, menu);
+
+		MenuItem item = menu.findItem(R.id.action_favourite);
+		MenuItem item3 = menu.findItem(R.id.action_exit);
+		item3.setVisible(false);
+		item.setVisible(false);
 		return true;
 	}
 	// ====================================================

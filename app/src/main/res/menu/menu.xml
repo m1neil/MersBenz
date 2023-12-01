@@ -1,15 +1,31 @@
 <?xml version="1.0" encoding="utf-8"?>
 <menu xmlns:android="http://schemas.android.com/apk/res/android"
-	xmlns:app="http://schemas.android.com/apk/res-auto"
-	>
+	xmlns:app="http://schemas.android.com/apk/res-auto">
+	<item
+	android:id="@+id/action_home"
+	android:icon="@drawable/icon_bakc_home"
+	android:orderInCategory="2"
+	android:title="До дому"
+	app:showAsAction="always" />
 
 	<item
-		android:id="@+id/action_home"
-		android:title="Home"
+		android:id="@+id/action_favourite"
+		android:icon="@drawable/icon_not_favorite"
 		android:orderInCategory="1"
-		app:showAsAction="always"
-		android:icon="@drawable/icon_bakc_home"
-		/>
+		android:title="Улюбленні"
+		app:showAsAction="always" />
 
+	<item
+		android:id="@+id/action_exit"
+		android:orderInCategory="2"
+		android:title="Вийти з аккаунту"
+		app:showAsAction="never" />
+
+	<item
+		android:id="@+id/action_clear"
+		android:orderInCategory="1"
+		android:title="Очистити список"
+		android:visible="false"
+		app:showAsAction="never" />
 
 </menu>

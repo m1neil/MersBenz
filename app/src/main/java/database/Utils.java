@@ -22,8 +22,6 @@ public class Utils {
 	public static final String KEY_FUEL_TANK_CAPACITY = "fuel_tank_capacity"; // емкость бака
 	public static final String KEY_MIDDLE_PRICE = "middle_price";
 	public static final String KEY_CATEGORY = "category";
-
-	// новые данные =============================================================
 	public static final String KEY_ENGINE = "engine"; // двигло
 	public static final String KEY_ENGINE_DESCR = "engine_descr"; // описание двигла
 	public static final String KEY_SUSPENSION_DESCR = "suspension"; // описание подвески

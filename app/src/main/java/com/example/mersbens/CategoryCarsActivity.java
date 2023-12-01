@@ -52,14 +52,26 @@ public class CategoryCarsActivity extends AppCompatActivity {
 		recyclerView.setLayoutManager(layoutManager);
 	}
 
-
-
 	@Override
-	public boolean onOptionsItemSelected(@NonNull MenuItem item) {
+	public boolean onOptionsItemSelected(MenuItem item) {
 		int id = item.getItemId();
 		if (id == android.R.id.home) {
 			NavUtils.navigateUpFromSameTask(this);
 		}
 		return super.onOptionsItemSelected(item);
+	}
+
+	@Override
+	public boolean onCreateOptionsMenu(Menu menu) {
+		MenuInflater menuInflater = getMenuInflater();
+		menuInflater.inflate(R.menu.menu, menu);
+
+		MenuItem item = menu.findItem(R.id.action_favourite);
+		MenuItem item2 = menu.findItem(R.id.action_home);
+		MenuItem item3 = menu.findItem(R.id.action_exit);
+		item.setVisible(false);
+		item2.setVisible(false);
+		item3.setVisible(false);
+		return true;
 	}
 }

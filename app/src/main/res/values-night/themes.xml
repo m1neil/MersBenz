@@ -3,8 +3,10 @@
 	<style name="Base.Theme.MersBens" parent="Theme.Material3.DayNight.NoActionBar">
 		<item name="android:statusBarColor">@color/mainColorApp</item>
 		<item name="android:windowLightStatusBar">false</item>
-		<!-- Customize your dark theme here. -->
-		<!-- <item name="colorPrimary">@color/my_dark_primary</item> -->
+		<item name="android:itemTextAppearance">@style/ChangeTextColor</item>
 	</style>
-
+	<style name="ChangeTextColor" parent="@android:style/TextAppearance.Widget.IconMenu.Item">
+		<item name="android:textColor">#ffffff</item>
+		<item name="android:textSize">18sp</item>
+	</style>
 </resources>

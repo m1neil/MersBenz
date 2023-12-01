@@ -9,6 +9,8 @@ import android.database.sqlite.SQLiteOpenHelper;
 import java.util.ArrayList;
 import java.util.List;
 
+import User.User;
+
 public class DatabaseHelper extends SQLiteOpenHelper {
 	public DatabaseHelper(Context context) {
 		super(context, Utils.DATABASE_NAME, null, Utils.DATABASE_VERSION);
@@ -42,7 +44,15 @@ public class DatabaseHelper extends SQLiteOpenHelper {
 			+ Utils.KEY_ELECTRICAL_EQUIPMENT + " TEXT" +
 			")";
 
+		String createTableUsers = "CREATE TABLE " + UtilsUsers.TABLE_NAME + "("
+			+ UtilsUsers.KEY_ID + " INTEGER PRIMARY KEY,"
+			+ UtilsUsers.KEY_NAME + " TEXT,"
+			+ UtilsUsers.KEY_EMAIL + " TEXT,"
+			+ UtilsUsers.KEY_PASSWORD + " TEXT,"
+			+ UtilsUsers.KEY_LIKE_CARS + " TEXT" + ")";
+
 		db.execSQL(createTable);
+		db.execSQL(createTableUsers);
 	}
 
 	@Override
@@ -124,10 +134,32 @@ public class DatabaseHelper extends SQLiteOpenHelper {
 		return cars;
 	}
 
+	public int getCarByName(String name) {
+		SQLiteDatabase db = this.getReadableDatabase();
+		Cursor cursor = db.query(Utils.TABLE_NAME_CARS,
+			new String[]{Utils.KEY_ID},
+			Utils.KEY_MODEL + "=?",
+			new String[]{name},
+			null, null, null, null);
+
+		int id = 0;
+
+		if (cursor.moveToFirst()) {
+			try {
+				int idIndex = cursor.getColumnIndex(Utils.KEY_ID);
+				id = cursor.getInt(idIndex);
+			} finally {
+				cursor.close();
+			}
+		}
+
+		return id;
+	}
+
 	public Car getCarById(int id) {
 		SQLiteDatabase db = this.getReadableDatabase();
 
-		Cursor cursor = db.query(Utils.TABLE_NAME_CARS, new String[]{Utils.KEY_ID, Utils.KEY_MODEL,
+		Cursor cursor = db.query(Utils.TABLE_NAME_CARS, new String[]{Utils.KEY_ID, Utils.KEY_MODEL, Utils.KEY_IMAGE_PATH,
 				Utils.KEY_IMAGE_PATH_SECOND, Utils.KEY_VIDEO_PATH, Utils.KEY_DESCRIPTION, Utils.KEY_YEAR_PRODUCED,
 				Utils.KEY_COUNTRY_PRODUCED, Utils.KEY_DOORS_AND_PLACES, Utils.KEY_MAX_SPEED, Utils.KEY_TYPE_TRANSMISSION,
 				Utils.KEY_DRIVE_UNIT, Utils.KEY_FUEL_TYPE, Utils.KEY_FUEL_TANK_CAPACITY, Utils.KEY_MIDDLE_PRICE,
@@ -142,6 +174,7 @@ public class DatabaseHelper extends SQLiteOpenHelper {
 				cursor.moveToFirst();
 				int idCar = cursor.getColumnIndex(Utils.KEY_ID);
 				int idModel = cursor.getColumnIndex(Utils.KEY_MODEL);
+				int idImagePathFirst = cursor.getColumnIndex(Utils.KEY_IMAGE_PATH);
 				int idImagePath = cursor.getColumnIndex(Utils.KEY_IMAGE_PATH_SECOND);
 				int idVideoPath = cursor.getColumnIndex(Utils.KEY_VIDEO_PATH);
 				int idDescription = cursor.getColumnIndex(Utils.KEY_DESCRIPTION);
@@ -164,6 +197,7 @@ public class DatabaseHelper extends SQLiteOpenHelper {
 
 				car.setId(cursor.getInt(idCar));
 				car.setModel(cursor.getString(idModel));
+				car.setImagePath(cursor.getInt(idImagePathFirst));
 				car.setImagePathSecond(cursor.getInt(idImagePath));
 				car.setVideoPath(cursor.getInt(idVideoPath));
 				car.setDescription(cursor.getString(idDescription));
@@ -206,6 +240,105 @@ public class DatabaseHelper extends SQLiteOpenHelper {
 			}
 		}
 		return count;
+	}
+
+	public void addUser(User user) {
+		SQLiteDatabase db = this.getWritableDatabase();
+
+		ContentValues contentValues = new ContentValues();
+		contentValues.put(UtilsUsers.KEY_NAME, user.getName());
+		contentValues.put(UtilsUsers.KEY_EMAIL, user.getEmail());
+		contentValues.put(UtilsUsers.KEY_PASSWORD, user.getPassword());
+		contentValues.put(UtilsUsers.KEY_LIKE_CARS, "");
+
+		db.insert(UtilsUsers.TABLE_NAME, null, contentValues);
+		db.close();
+	}
+
+	public int getUserByEmail(String email) {
+		SQLiteDatabase db = this.getReadableDatabase();
+		Cursor cursor = db.query(UtilsUsers.TABLE_NAME,
+			new String[]{Utils.KEY_ID},
+			UtilsUsers.KEY_EMAIL + "=?",
+			new String[]{email},
+			null, null, null, null);
+
+		int id = 0;
+
+		if (cursor.moveToFirst()) {
+			try {
+				int idIndex = cursor.getColumnIndex(UtilsUsers.KEY_ID);
+				id = cursor.getInt(idIndex);
+			} finally {
+				cursor.close();
+			}
+		}
+
+		return id;
+	}
+
+	public String getLikeCars(int id) {
+		SQLiteDatabase db = this.getReadableDatabase();
+		Cursor cursor = db.query(UtilsUsers.TABLE_NAME,
+			new String[]{UtilsUsers.KEY_LIKE_CARS},
+			UtilsUsers.KEY_ID + "=?",
+			new String[]{String.valueOf(id)},
+			null, null, null, null);
+
+		String likeCars = "";
+
+		if (cursor.moveToFirst()) {
+			try {
+				int listCarsIndex = cursor.getColumnIndex(UtilsUsers.KEY_LIKE_CARS);
+				likeCars = cursor.getString(listCarsIndex);
+			} finally {
+				cursor.close();
+			}
+		}
+
+		return likeCars;
+	}
+
+	public int updateUser(User user) {
+		SQLiteDatabase db = this.getWritableDatabase();
+
+		ContentValues contentValues = new ContentValues();
+		contentValues.put(UtilsUsers.KEY_LIKE_CARS, user.getLikeCars());
+
+		return db.update(UtilsUsers.TABLE_NAME, contentValues, UtilsUsers.KEY_ID + "=?",
+			new String[] {String.valueOf(user.getId())});
+	}
+
+
+	public User getUserByByEmailFullInfo(int id) {
+		SQLiteDatabase db = this.getReadableDatabase();
+
+		Cursor cursor = db.query(UtilsUsers.TABLE_NAME, new String[]{UtilsUsers.KEY_ID, UtilsUsers.KEY_NAME,
+				UtilsUsers.KEY_EMAIL, UtilsUsers.KEY_PASSWORD,
+			UtilsUsers.KEY_LIKE_CARS}, UtilsUsers.KEY_ID + "=?", new String[]{String.valueOf(id)},
+			null, null,
+			null, null);
+		User user = new User();
+		if (cursor != null) {
+			try {
+				cursor.moveToFirst();
+				int idUser = cursor.getColumnIndex(UtilsUsers.KEY_ID);
+				int idName = cursor.getColumnIndex(UtilsUsers.KEY_NAME);
+				int idEmail = cursor.getColumnIndex(UtilsUsers.KEY_EMAIL);
+				int idPass = cursor.getColumnIndex(UtilsUsers.KEY_PASSWORD);
+				int idListCarsId = cursor.getColumnIndex(UtilsUsers.KEY_LIKE_CARS);
+
+				user.setId(cursor.getInt(idUser));
+				user.setName(cursor.getString(idName));
+				user.setEmail(cursor.getString(idEmail));
+				user.setPassword(cursor.getString(idPass));
+				user.setLikeCars(cursor.getString(idListCarsId));
+
+			} finally {
+				cursor.close();
+			}
+		}
+		return user;
 	}
 
 }
